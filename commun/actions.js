@@ -53,9 +53,9 @@
   // le Chronographe affiché dans une page d'un autre site (ex. une page Squarespace) : l'ajout porterait sur cette page
   function integre() { try { return global.self !== global.top; } catch (x) { return true; } }
   function etapes(p, surMinute) {
-    var accueil = surMinute ? '<p class="note">Pour que l’icône ouvre toujours le Chronographe à l’heure du moment, faites l’ajout depuis le Chronographe : <a href="/chronographe-la-essai/">ouvrir le Chronographe</a>.</p>' : '';
+    var accueil = surMinute ? '<p class="note">Pour que l’icône ouvre toujours le Chronographe à l’heure du moment, faites l’ajout depuis le Chronographe : <a href="/">ouvrir le Chronographe</a>.</p>' : '';
     switch (p) {
-      case 'integre': return '<p>Le Chronographe est présenté ici à l’intérieur d’une page du site. Ajoutée depuis cette page, l’icône ouvrirait la page du site, pas le Chronographe.</p><ol><li>Ouvrez le Chronographe à sa propre adresse : <a class="principal" href="/chronographe-la-essai/" target="_blank" rel="noopener" data-autonome>Ouvrir le Chronographe</a></li><li>Touchez à nouveau « Ajouter à mon écran d’accueil » et suivez l’aide.</li></ol>';
+      case 'integre': return '<p>Le Chronographe est présenté ici à l’intérieur d’une page du site. Ajoutée depuis cette page, l’icône ouvrirait la page du site, pas le Chronographe.</p><ol><li>Ouvrez le Chronographe à sa propre adresse : <a class="principal" href="/" target="_blank" rel="noopener" data-autonome>Ouvrir le Chronographe</a></li><li>Touchez à nouveau « Ajouter à mon écran d’accueil » et suivez l’aide.</li></ol>';
       case 'installe': return '<p>Le Chronographe LÀ est déjà sur votre écran d’accueil : vous l’avez ouvert depuis son icône.</p>';
       case 'ios-safari': return '<ol><li>Touchez le bouton <b>Partager</b> (le carré avec une flèche vers le haut).</li><li>Choisissez <b>Sur l’écran d’accueil</b>. Si l’option n’apparaît pas, faites défiler la liste.</li><li>Laissez <b>Ouvrir comme app web</b> activé s’il est proposé, puis touchez <b>Ajouter</b>.</li></ol>' + accueil;
       case 'ios-autre': return '<ol><li>Touchez le bouton <b>Partager</b> de votre navigateur.</li><li>Choisissez <b>Sur l’écran d’accueil</b>.</li><li>Touchez <b>Ajouter</b>.</li></ol><p class="note">Si l’option n’apparaît pas, ouvrez cette page dans Safari.</p>' + accueil;
@@ -90,7 +90,7 @@
   }
   function lien(e) {
     var base = CFG.base != null ? CFG.base : (location.protocol.indexOf('http') === 0 ? location.origin : '');
-    return base + '/chronographe-la-essai/m/' + slug(e);
+    return base + '/m/' + slug(e);
   }
   function resume(e) {
     var n = e.entree; if (!n) return e.heure;

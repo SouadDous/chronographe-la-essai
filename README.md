@@ -1,7 +1,7 @@
-# Le Chronographe LÀ — version d’essai
+# Le Chronographe LÀ
 
-Copie d’essai de la nouvelle édition du Chronographe LÀ (Éditions LÀ), servie par GitHub Pages à
-https://souaddous.github.io/chronographe-la-essai/ — adresse non diffusée, pages non indexées.
+La nouvelle édition du Chronographe LÀ (Éditions LÀ), en ligne à https://chronographe.editionsla.com/
 
-Ce dépôt ne contient que le site construit. Il est produit par `outils/construire_site.py --chemin /chronographe-la-essai`
-dans le dossier de production ; ne pas le modifier à la main. Indépendant de l’ancien Chronographe (dépôt `chronographe`).
+Ce dépôt ne contient que le site construit, produit par `outils/construire_site.py --definitif --enregistrer` dans le
+dossier de production. Ne pas le modifier à la main : les adresses des instants partagés (`/m/…`) ne doivent jamais changer.
+Indépendant de l’ancien Chronographe (dépôt `chronographe`).

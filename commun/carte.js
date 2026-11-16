@@ -125,7 +125,7 @@
   function dessiner(d, opts) {
     opts = opts || {};
     var polices = ['400 38px "EB Garamond"', 'italic 400 31px "EB Garamond"', '500 27px "EB Garamond"'];
-    return Promise.all([chargerImage(opts.sphere || '/chronographe-la-essai/commun/media/b-fixe.jpg')].concat(document.fonts ? polices.map(function (p) { return document.fonts.load(p); }) : []))
+    return Promise.all([chargerImage(opts.sphere || '/commun/media/b-fixe.jpg')].concat(document.fonts ? polices.map(function (p) { return document.fonts.load(p); }) : []))
       .then(function (r) {
         var img = r[0], canvas = document.createElement('canvas'); canvas.width = L; canvas.height = H;
         var ctx = canvas.getContext('2d'), comp = composer(ctx, d), cible = H - MARGE_BAS;
