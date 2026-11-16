@@ -1,0 +1,33 @@
+{
+ "id": "/chronographe-la-essai/",
+ "name": "Le Chronographe LÀ",
+ "short_name": "Chronographe LÀ",
+ "lang": "fr",
+ "dir": "ltr",
+ "description": "Une minute partagée avec vous. Le Chronographe LÀ : des mots à découvrir, des instants à lire. Toutes les dix minutes, une nouvelle rencontre.",
+ "start_url": "/chronographe-la-essai/?source=icone",
+ "scope": "/chronographe-la-essai/",
+ "display": "standalone",
+ "background_color": "#F6F3ED",
+ "theme_color": "#F6F3ED",
+ "icons": [
+  {
+   "src": "/chronographe-la-essai/icones/icone-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "/chronographe-la-essai/icones/icone-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "/chronographe-la-essai/icones/icone-masquable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
