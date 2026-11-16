@@ -4,7 +4,7 @@
    Le nom du cache change à chaque construction : ses anciennes copies sont effacées, jamais les caches d'un autre site
    servi depuis la même origine (ex. l'ancien Chronographe sur <compte>.github.io/chronographe). */
 var PREFIXE = 'chronographe-la-nouvelle-edition-';   // n'efface jamais un cache d'un autre site de la même origine
-var CACHE = PREFIXE + '492f55639786';
+var CACHE = PREFIXE + '8aa40f7816a7';
 var ESSENTIEL = ['/chronographe-la-essai/', '/chronographe-la-essai/commun/commun.css', '/chronographe-la-essai/commun/objet.css', '/chronographe-la-essai/commun/moteur.js', '/chronographe-la-essai/commun/carte.js', '/chronographe-la-essai/commun/actions.js',
   '/chronographe-la-essai/commun/objet.js', '/chronographe-la-essai/commun/recu.js', '/chronographe-la-essai/commun/polices/ebg-roman.woff2', '/chronographe-la-essai/commun/polices/ebg-italic.woff2',
   '/chronographe-la-essai/commun/media/b-fixe.jpg', '/chronographe-la-essai/corpus/actuel.json', '/chronographe-la-essai/manifest.webmanifest'];

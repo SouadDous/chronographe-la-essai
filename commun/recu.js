@@ -1,7 +1,7 @@
 /* Le Chronographe LÀ — écran de la minute partagée (et page d'accueil provisoire).
    La minute envoyée est écrite dans la page elle-même (#minute) : elle ne dépend jamais du corpus
    actuel et reste identique pour toujours, même après une correction du texte.
-   « Découvrir ma minute » lit le corpus actuel (/chronographe-la-essai/corpus/actuel.json) et suit l'heure de l'appareil. */
+   « Ouvrir le Chronographe » lit le corpus actuel (/chronographe-la-essai/corpus/actuel.json) et suit l'heure de l'appareil. */
 (function(){
 'use strict';
 var C=window.ChronoLA, $=function(s){return document.querySelector(s);};
@@ -47,9 +47,9 @@ var pret=fetch('/chronographe-la-essai/corpus/actuel.json',{cache:'no-cache'}).t
 
 function bascule(vers){
   var faire=function(){
-    if(vers==='actuelle'){ C.modeDirect(); remplir(C.etat()); etat.textContent='Votre minute';
+    if(vers==='actuelle'){ C.modeDirect(); remplir(C.etat()); etat.textContent='Votre instant';
       $('[data-avant]').hidden=true; $('[data-apres]').hidden=false; $('[data-explication]').hidden=true; }
-    else { remplir({heure:envoyee.heure, entree:envoyee}); etat.textContent='Une minute partagée avec vous';
+    else { remplir({heure:envoyee.heure, entree:envoyee}); etat.textContent='Un instant pour vous';
       $('[data-avant]').hidden=false; $('[data-apres]').hidden=true; $('[data-explication]').hidden=false; }
     mode=vers; bloc.classList.remove('sort'); etat.style.opacity=''; ajuster();
   };

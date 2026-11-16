@@ -4,7 +4,7 @@
  "short_name": "Chronographe LÀ",
  "lang": "fr",
  "dir": "ltr",
- "description": "Une minute partagée avec vous. Le Chronographe LÀ : des mots à découvrir, des instants à lire. Toutes les dix minutes, une nouvelle rencontre.",
+ "description": "Un instant partagé. Le Chronographe LÀ : des mots à découvrir, des instants à lire. Toutes les dix minutes, une nouvelle rencontre.",
  "start_url": "/chronographe-la-essai/?source=icone",
  "scope": "/chronographe-la-essai/",
  "display": "standalone",

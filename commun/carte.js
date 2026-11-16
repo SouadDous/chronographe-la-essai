@@ -77,7 +77,7 @@
       bloc(ctx, d.invitation, { police: police('normal', 400, 36), taille: 36, hauteurLigne: 1.32, avant: 0, largeur: 1000 }),
       bloc(ctx, d.adresse, { police: police('normal', 400, 31), taille: 31, hauteurLigne: 1.3, avant: 22, largeur: 1000 })
     ];
-    return { haut: etiq('Une minute partagée', 0), corps: corps, fin: fin };
+    return { haut: etiq('Un instant partagé', 0), corps: corps, fin: fin };
   }
 
   function mise(comp, t, margeHaut, filetAvant, filetApres) {

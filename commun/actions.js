@@ -53,7 +53,7 @@
   // le Chronographe affiché dans une page d'un autre site (ex. une page Squarespace) : l'ajout porterait sur cette page
   function integre() { try { return global.self !== global.top; } catch (x) { return true; } }
   function etapes(p, surMinute) {
-    var accueil = surMinute ? '<p class="note">Pour que l’icône ouvre toujours votre minute du moment, faites l’ajout depuis le Chronographe : <a href="/chronographe-la-essai/">ouvrir le Chronographe</a>.</p>' : '';
+    var accueil = surMinute ? '<p class="note">Pour que l’icône ouvre toujours le Chronographe à l’heure du moment, faites l’ajout depuis le Chronographe : <a href="/chronographe-la-essai/">ouvrir le Chronographe</a>.</p>' : '';
     switch (p) {
       case 'integre': return '<p>Le Chronographe est présenté ici à l’intérieur d’une page du site. Ajoutée depuis cette page, l’icône ouvrirait la page du site, pas le Chronographe.</p><ol><li>Ouvrez le Chronographe à sa propre adresse : <a class="principal" href="/chronographe-la-essai/" target="_blank" rel="noopener" data-autonome>Ouvrir le Chronographe</a></li><li>Touchez à nouveau « Ajouter à mon écran d’accueil » et suivez l’aide.</li></ol>';
       case 'installe': return '<p>Le Chronographe LÀ est déjà sur votre écran d’accueil : vous l’avez ouvert depuis son icône.</p>';
@@ -101,19 +101,19 @@
   function partager(etat) {
     // la minute est figée ici, au clic : rien de ce qui suit ne relit l'horloge
     var f = JSON.parse(JSON.stringify({ heure: etat.heure, entree: etat.entree }));
-    var url = lien(f), d = fenetre('d-partage', 'Partager cette minute'), c = d.querySelector('.corps');
+    var url = lien(f), d = fenetre('d-partage', 'Partager cet instant'), c = d.querySelector('.corps');
     var peutEnvoyer = !!navigator.share;
     c.innerHTML = '<p class="fige" data-fige>' + esc(resume(f)) + '</p>' +
-      '<p><label class="lien">Lien de cette minute<input type="text" readonly data-lien value="' + esc(url) + '"></label></p>' +
+      '<p><label class="lien">Lien de cet instant<input type="text" readonly data-lien value="' + esc(url) + '"></label></p>' +
       '<p class="boutons">' + (peutEnvoyer ? '<button type="button" class="principal" data-envoyer>Envoyer le lien</button>' : '') +
       '<button type="button" class="' + (peutEnvoyer ? 'secondaire' : 'principal') + '" data-copier>Copier le lien</button>' +
       '<button type="button" class="secondaire" data-image disabled>Enregistrer l’image</button></p>' +
       '<p class="etat" role="status" data-statut></p>' +
-      '<figure class="apercu"><img alt="Carte de la minute partagée" data-apercu hidden><figcaption class="note" data-legende>Préparation de l’image…</figcaption></figure>' +
+      '<figure class="apercu"><img alt="Carte de l’instant partagé" data-apercu hidden><figcaption class="note" data-legende>Préparation de l’image…</figcaption></figure>' +
       (CFG.essai ? '<p class="note essai-note">' + CFG.essai + '</p>' : '') +
       (CFG.recu ? '<p class="note"><a href="' + esc(CFG.recu(slug(f))) + '" target="_blank" rel="noopener">Ouvrir la page reçue (démonstration)</a></p>' : '');
     var statut = c.querySelector('[data-statut]'); var dire = function (t) { statut.textContent = t; };
-    var titre = 'Le Chronographe LÀ — ' + f.heure, texte = 'Une minute partagée : ' + resume(f);
+    var titre = 'Le Chronographe LÀ — ' + f.heure, texte = 'Un instant partagé : ' + resume(f);
     if (peutEnvoyer) c.querySelector('[data-envoyer]').onclick = function () {
       navigator.share({ title: titre, text: texte, url: url }).then(function () { dire('Lien envoyé.'); }).catch(function (x) { if (x && x.name !== 'AbortError') dire('L’envoi n’a pas abouti : copiez le lien.'); });
     };
@@ -130,7 +130,7 @@
         fichier = new File([b], nom, { type: 'image/png' });
         var img = c.querySelector('[data-apercu]'); img.src = URL.createObjectURL(b); img.hidden = false;
         var ios = /^ios/.test(plateforme());
-        c.querySelector('[data-legende]').textContent = ios ? 'Sur iPhone, vous pouvez aussi toucher longuement l’image, puis « Enregistrer dans Photos ».' : 'L’image de la minute, au format 1080 × 1350.';
+        c.querySelector('[data-legende]').textContent = ios ? 'Sur iPhone, vous pouvez aussi toucher longuement l’image, puis « Enregistrer dans Photos ».' : 'L’image de cet instant, au format 1080 × 1350.';
         var btn = c.querySelector('[data-image]'); btn.disabled = false;
         btn.onclick = function () {
           if (navigator.canShare && navigator.canShare({ files: [fichier] })) {
