@@ -1,0 +1,7 @@
+# Le Chronographe LÀ — dépendances Python (versions avec lesquelles tout a été vérifié le 15 novembre 2026)
+numpy==2.5.3
+pillow==12.3.0
+fonttools==4.67.0
+brotli==1.2.1
+playwright==1.63.0
+# Hors Python : ffmpeg 6.1 ou plus récent (avec libx264), Python 3.10 ou plus récent.

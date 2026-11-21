@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Le Chronographe LÀ — minute partagée et parcours de réception (prototype privé)</title>
+<meta name="robots" content="noindex, nofollow">
+<!--FONTS-->
+<style>
+:root{--papier:#FAF8F5;--ivoire:#F6F3ED;--encre:#121110;--gris:#4B453F;--trait:#D9D2C6;
+  --serif:"EB Garamond",Garamond,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--papier);color:var(--encre);font-family:var(--serif);-webkit-font-smoothing:antialiased;min-height:100svh}
+button,a{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--encre);outline-offset:3px;border-radius:6px}
+[hidden]{display:none!important}
+
+.proto{position:sticky;top:0;z-index:50;background:rgba(250,248,245,.95);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--trait);font:500 15px/1.25 var(--sans);padding:8px 12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center}
+.proto button{border:1px solid var(--trait);border-radius:999px;padding:7px 12px;min-height:38px;background:#fff;white-space:nowrap}
+.proto button[aria-pressed="true"]{background:var(--encre);color:#fff;border-color:var(--encre)}
+@media (max-width:700px){.proto{position:static;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;scrollbar-width:none}}
+
+/* La sphère B, entière, son fond fondu dans l'ivoire */
+.sphere{--t:520px;position:relative;width:var(--t);height:var(--t);flex:none}
+.sphere video,.sphere img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;
+  -webkit-mask-image:radial-gradient(circle at 50% 47%, #000 0, #000 calc(var(--t) * .395), transparent calc(var(--t) * .49));
+          mask-image:radial-gradient(circle at 50% 47%, #000 0, #000 calc(var(--t) * .395), transparent calc(var(--t) * .49))}
+.heure{font-weight:400;font-variant-numeric:lining-nums tabular-nums;letter-spacing:-.005em;line-height:.9;display:block}
+.phrase{font-weight:400;text-wrap:balance}
+.phrase p+p{margin-top:.2em}
+.phrase .a-ecrire{font-style:italic;color:var(--gris);font-size:.8em}
+.etiquette{font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+
+/* ------------------------------------------------------------------
+   1 · L'image à enregistrer (1080 × 1350) : elle doit s'expliquer seule
+------------------------------------------------------------------ */
+.banc{display:flex;flex-wrap:wrap;gap:40px;justify-content:center;align-items:flex-start;padding:30px 16px 70px}
+.legende{font:16px/1.5 var(--sans);color:#3f3832;max-width:520px;margin-top:12px}
+.legende b{font-weight:600}
+.cadre{position:relative;overflow:hidden;box-shadow:0 30px 60px -34px rgba(0,0,0,.35)}
+.carte{position:absolute;left:0;top:0;width:1080px;height:1350px;transform-origin:0 0;background:var(--ivoire);color:var(--encre);
+  display:flex;flex-direction:column;align-items:center;text-align:center}
+.carte .etiquette.haut{margin-top:92px;font-size:27px}
+.carte .sphere{--t:600px;margin-top:-6px}
+.carte .heure{font-size:146px;margin-top:-58px}
+.carte .phrase{font-size:46px;line-height:1.22;margin-top:34px;max-width:960px}
+.carte .filet{width:56px;height:1.5px;background:var(--encre);opacity:.55;margin:58px auto 44px}
+.carte .etiquette.bas{font-size:27px}
+.carte .promesse{font-size:36px;line-height:1.32;margin-top:16px}
+.carte .adresse{font-size:31px;margin-top:22px;letter-spacing:.01em}
+
+/* ------------------------------------------------------------------
+   2 · L'aperçu de lien (1200 × 630) : il donne envie d'ouvrir
+------------------------------------------------------------------ */
+.og{position:absolute;left:0;top:0;width:1200px;height:630px;transform-origin:0 0;background:var(--ivoire);color:var(--encre);
+  display:grid;grid-template-columns:600px 1fr;align-items:center}
+.og .sphere{--t:640px;margin:-10px 0 0 -20px}
+.og .bloc{padding-right:70px}
+.og .etiquette{font-size:38px;letter-spacing:.1em}
+.og .heure{font-size:184px;margin-top:10px;margin-left:-.04em}
+.og .marque{font-size:44px;margin-top:26px}
+.og .marque span{display:block;font-size:34px;color:var(--gris);margin-top:4px}
+/* conversation générique (aucune application réelle imitée) */
+.conv{width:360px;background:#fff;border-radius:28px;border:1px solid var(--trait);padding:18px 14px 22px;font-family:var(--sans)}
+.conv .qui{font-size:14px;color:#6b635b;text-align:center;margin-bottom:12px}
+.bulle{background:#ECE9E3;border-radius:20px;overflow:hidden;max-width:300px}
+.bulle .img{position:relative;width:300px;height:157px;overflow:hidden}
+.bulle .txt{padding:10px 12px 12px}
+.bulle .titre{font-size:15px;font-weight:600;line-height:1.3;color:#1d1a17}
+.bulle .desc{font-size:14px;line-height:1.35;color:#4a443e;margin-top:4px}
+.bulle .dom{font-size:13px;color:#7a726a;margin-top:6px}
+.bulle-msg{background:#ECE9E3;border-radius:20px;padding:10px 14px;font-size:16px;line-height:1.35;margin-top:8px;max-width:300px}
+.bulle a{text-decoration:none;display:block}
+.meta{font:15px/1.5 var(--sans);border-collapse:collapse;max-width:620px;margin-top:6px}
+.meta td{border-bottom:1px solid var(--trait);padding:8px 10px;vertical-align:top}
+.meta td:first-child{white-space:nowrap;color:#6b635b}
+
+/* ------------------------------------------------------------------
+   3 · Le parcours du destinataire
+------------------------------------------------------------------ */
+.tel{width:390px;height:844px;border-radius:44px;border:10px solid #1b1b1b;overflow:hidden;background:#fff;flex:none;box-shadow:0 30px 60px -30px rgba(0,0,0,.4)}
+.tel iframe{width:370px;height:824px;border:0;display:block}
+.recu{min-height:100svh;background:var(--ivoire);display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 20px 36px}
+.recu .barre{width:100%;display:flex;justify-content:space-between;align-items:center;font-size:18px;padding:10px 0 0;max-width:900px}
+.recu .barre a,.recu .barre button{min-height:48px;display:inline-flex;align-items:center;padding:0 6px;text-decoration:none}
+.recu .etat{min-height:28px;margin-top:clamp(10px,2svh,26px);font-size:17px;transition:opacity .4s}
+.recu .sphere{--t:min(80vw, 34svh, 470px)}
+.recu .etat{font-size:15px;letter-spacing:.1em}
+.recu .heure{font-size:clamp(52px,7.4svh,92px);margin-top:clamp(-30px,-2svh,-8px)}
+.recu .phrase{font-size:clamp(23px,3svh,33px);line-height:1.25;max-width:20em;margin-top:clamp(14px,2.4svh,28px)}
+.recu .change{transition:opacity .45s ease}
+.recu .change.sort{opacity:0}
+.recu .explication{margin-top:clamp(20px,3.4svh,40px);max-width:22em}
+.recu .explication .etiquette{font-size:15px}
+.recu .explication p.p{font-size:clamp(19px,2.3svh,22px);line-height:1.4;margin-top:6px}
+.recu .agir{display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:clamp(16px,2.6svh,28px)}
+.recu .principal{min-height:52px;padding:0 26px;border-radius:999px;background:var(--encre);color:#fff;font-size:18px}
+.recu .secondaire{min-height:48px;padding:0 6px;font-size:18px;text-decoration:underline;text-underline-offset:6px;text-decoration-color:rgba(18,17,16,.35)}
+.recu .retour{min-height:48px;font-size:17px;text-decoration:underline;text-underline-offset:6px;text-decoration-color:rgba(18,17,16,.35)}
+@media (min-width:900px){.recu .sphere{--t:min(40svh, 480px)}}
+/* La boîte de la sphère contient une marge transparente (fondu du fond) : on la neutralise, sans rien changer à l'image. */
+.recu .sphere{margin:calc(var(--t) * -.02) 0 calc(var(--t) * -.06)}
+.recu .explication p.p{text-wrap:balance}
+/* Écrans courts (iPhone SE 1re génération…) : seule la sphère et les blancs s'ajustent ; les caractères gardent leur taille. */
+@media (max-height:600px){
+  .recu{padding-left:12px;padding-right:12px}
+  /* la barre (Éditions LÀ · Qu’est-ce que c’est ?) passe en bas de l’écran : les mots et le bouton remontent */
+  .recu .barre{order:99;padding-top:10px;justify-content:center;gap:18px}
+  .recu .etat{margin-top:14px;letter-spacing:.05em}
+  .recu .sphere{--t:min(80vw, 33svh)}
+  .recu .phrase{margin-top:14px}
+  .recu .explication{margin-top:24px}
+  .recu .explication p.p{margin-top:4px}
+  .recu .agir{margin-top:20px}
+}
+@media (prefers-reduced-motion:reduce){.recu .change,.recu .etat{transition:none}}
+.note{font:16px/1.55 var(--sans);color:#3f3832;max-width:720px;margin:0 auto;padding:0 18px 60px}
+.note h2{font:600 18px var(--sans);margin:22px 0 6px}
+.note li{margin:4px 0 4px 1.2em}
+dialog{margin:auto;border:0;border-radius:14px;padding:26px 22px 22px;width:min(540px,calc(100vw - 20px));background:#fff;color:var(--encre)}
+dialog::backdrop{background:rgba(20,16,12,.55)}
+dialog h2{font-weight:400;font-size:28px;margin:0 80px 12px 0}
+dialog p{font-size:19px;line-height:1.45}
+dialog .fermer{position:absolute;top:12px;right:12px;min-height:44px;padding:0 14px;border:1.5px solid var(--trait);border-radius:999px;font-size:17px}
+/* Règles communes avec les pages publiées (notice, réception, carte), injectées depuis commun.css */
+/*COMMUN*/
+body{background:var(--papier)}
+.carte{transform-origin:0 0}.og{transform-origin:0 0}
+</style>
+</head>
+<body>
+<div class="proto" role="navigation" aria-label="Commandes du prototype">
+  <strong>Prototype</strong>
+  <button type="button" data-vue="carte">1 · Image à enregistrer</button>
+  <button type="button" data-vue="apercu">2 · Aperçu de lien</button>
+  <button type="button" data-vue="parcours">3 · Parcours du destinataire</button>
+  <button type="button" data-vue="recu">Ouvrir le lien reçu</button>
+  <label style="display:flex;gap:6px;align-items:center">Relecture <select id="r-minute" aria-label="Minute envoyée" style="font:inherit;border:1px solid var(--trait);border-radius:999px;padding:7px 10px;min-height:38px;background:#fff;max-width:min(70vw,340px)"></select></label>
+</div>
+<main id="vue"></main>
+
+<dialog id="d-propos" aria-labelledby="t-propos"><button class="fermer" type="button" data-fermer>Fermer</button>
+  <h2 id="t-propos">Le Chronographe LÀ</h2>
+  <p>{{PROPOS}}</p></dialog>
+<dialog id="d-sources" aria-labelledby="t-sources"><button class="fermer" type="button" data-fermer>Fermer</button>
+  <h2 id="t-sources">Sources</h2><div data-liste-sources></div></dialog>
+
+<script type="application/json" id="corpus">/*CORPUS*/</script>
+<script>
+// Démonstration : l'adresse définitive n'est pas encore en ligne. Le lien affiché est celui de la version définitive ;
+// « Ouvrir la page reçue » montre la page que recevra le destinataire, avec la minute exacte et sa version.
+window.CHRONO_ACTIONS={base:'https://chronographe.editionsla.com', promesse:'Des mots à découvrir. Des instants à lire.', invitation:'Toutes les dix minutes, une nouvelle rencontre.',
+  adresse:'editionsla.com/le-chronographe-la', sphere:'/*SPHERE_DATA*/', essai:'Démonstration : ce lien ne fonctionnera qu’une fois la version d’essai en ligne (avec votre accord) ; en attendant, ouvrez la page reçue ci-dessous.',
+  recu:function(s){ return (location.pathname.indexOf('/partage/')>=0 ? '' : '../partage/') + 'index.html#recu@' + s; }};
+</script>
+<script>/*MOTEUR*/</script>
+<script>/*CARTE*/</script>
+<script>/*ACTIONS*/</script>
+<script>
+(function(){
+'use strict';
+var C=window.ChronoLA; C.charger(JSON.parse(document.getElementById('corpus').textContent));
+var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+var reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var ADRESSE='editionsla.com/le-chronographe-la';
+// La minute envoyée (lien de démonstration) : 03:17 par défaut, ou le créneau choisi pour la relecture.
+var MINUTE=(function(){ try{ return localStorage.getItem('chrono-la-minute')||'03:17'; }catch(e){ return '03:17'; } })();
+var CORPUS_DEMO=JSON.parse(document.getElementById('corpus').textContent), ENTREE=CORPUS_DEMO.creneaux[C.creneau(MINUTE)] || CORPUS_DEMO.creneaux['03:10'];
+if(!CORPUS_DEMO.creneaux[C.creneau(MINUTE)]) MINUTE='03:17';
+var PARTAGE={heure:MINUTE, id:ENTREE.id, version:ENTREE.version};
+// Lien reçu (démonstration) : #recu@1257-a1 = minute 12:57, contenu a de son créneau, version 1 — la minute exacte envoyée.
+(function(){ var m=/^#recu@(\d\d)(\d\d)-([a-z])(\d+)$/.exec(location.hash); if(!m) return;
+  var h=m[1]+':'+m[2], e=CORPUS_DEMO.creneaux[C.creneau(h)];
+  if(e && e.id.split('-')[1]===m[3]){ MINUTE=h; ENTREE=e; PARTAGE={heure:h, id:e.id, version:+m[4]}; } })();
+
+function sphere(anime){
+  var s=document.createElement('div'); s.className='sphere';
+  if(anime){ var v=document.createElement('video'); v.muted=true; v.setAttribute('muted',''); v.playsInline=true; v.setAttribute('playsinline','');
+    v.loop=true; v.autoplay=!reduit; v.preload='metadata'; v.poster='media/b-fixe.jpg'; v.src='media/b-624.mp4'; v.setAttribute('aria-hidden','true'); s.appendChild(v);
+    if(!reduit){ var p=v.play(); if(p&&p.catch) p.catch(function(){}); } }
+  else { var i=document.createElement('img'); i.src='media/b-fixe.jpg'; i.alt=''; s.appendChild(i); }
+  return s;
+}
+var enCadre=false;
+function phraseHTML(e){ return C.noticeHTML(e); }
+function sansSources(h){ return h.replace(/<p class="voir">.*?<\/p>/,''); }   // pas de bouton dans une image
+document.addEventListener('click',function(ev){ if(!ev.target.closest('[data-sources]')) return;
+  var e=document.querySelector('[data-etat]') && /votre/i.test(document.querySelector('[data-etat]').textContent) ? C.etat() : envoyee;
+  document.querySelector('[data-liste-sources]').innerHTML=C.sourcesHTML(e.entree); document.getElementById('d-sources').showModal(); });
+var envoyee=(function(){ C.modePartage({mode:'partagee',heure:PARTAGE.heure,id:PARTAGE.id,version:String(PARTAGE.version)}); var x=C.etat(); C.modeDirect(); return x; })();
+
+function echelle(cadre, el, w){ var f=function(){ el.style.transform='scale('+(cadre.clientWidth/w)+')'; }; requestAnimationFrame(f); addEventListener('resize',f); }
+
+/* ---------- 1 · la carte image ---------- */
+function carte(){
+  var c=document.createElement('div'); c.className='carte'; c.id='carte-image'; c.setAttribute('role','img');
+  var n=envoyee.entree, lu=n.type==='fragment' ? n.lignes.join(' ')+(n.attribution&&n.attribution.auteur?' '+C.attributionTexte(n.attribution).join(', ')+'.':'') : n.mot+', '+C.natureTexte(n)+' : '+n.definition;
+  c.setAttribute('aria-label','Un instant partagé. '+envoyee.heure+'. '+lu+' Le Chronographe LÀ. Des mots à découvrir. Des instants à lire. Toutes les dix minutes, une nouvelle rencontre. '+ADRESSE);
+  c.innerHTML='<p class="etiquette haut">Un instant partagé</p><div class="place"></div>'+
+    '<time class="heure">'+envoyee.heure+'</time><div class="phrase">'+sansSources(phraseHTML(envoyee))+'</div>'+
+    '<div class="filet" aria-hidden="true"></div><p class="etiquette bas">Le Chronographe LÀ</p>'+
+    '<p class="promesse">Des mots à découvrir. Des instants à lire.<br>Toutes les dix minutes, une nouvelle rencontre.</p><p class="adresse">'+ADRESSE+'</p>';
+  $('.place',c).replaceWith(sphere(false));
+  return c;
+}
+function vueCarte(){
+  // l'image à enregistrer, dessinée par carte.js : le même code que sur le téléphone du lecteur
+  var b=document.createElement('div'); b.className='banc'; var col=document.createElement('div');
+  var cad=document.createElement('div'); cad.className='cadre'; cad.style.cssText='width:min(540px,92vw);aspect-ratio:4/5';
+  ChronoCarte.dessiner({heure:envoyee.heure, contenu:envoyee.entree, promesse:CHRONO_ACTIONS.promesse, invitation:CHRONO_ACTIONS.invitation, adresse:ADRESSE},{sphere:CHRONO_ACTIONS.sphere})
+    .then(function(x){ x.canvas.id='carte-image'; x.canvas.style.cssText='width:100%;height:auto;display:block'; x.canvas.setAttribute('role','img');
+      var n=envoyee.entree, lu=n.type==='fragment' ? n.lignes.join(' ') : n.mot+', '+C.natureTexte(n)+' : '+n.definition;
+      x.canvas.setAttribute('aria-label','Un instant partagé. '+envoyee.heure+'. '+lu+' Le Chronographe LÀ. Des mots à découvrir. Des instants à lire. Toutes les dix minutes, une nouvelle rencontre. '+ADRESSE);
+      cad.appendChild(x.canvas); document.body.dataset.carte='1'; });
+  col.appendChild(cad);
+  var l=document.createElement('p'); l.className='legende'; l.innerHTML='<b>L’image à enregistrer</b> (1080 × 1350), dessinée sur l’appareil du lecteur au moment du partage. Elle circule seule : elle dit ce que c’est, la minute, le contenu, ce qu’est le Chronographe et où le trouver.';
+  col.appendChild(l); b.appendChild(col); return b;
+}
+
+/* ---------- 2 · l'aperçu de lien ---------- */
+function og(){
+  var o=document.createElement('div'); o.className='og'; o.id='apercu-image'; o.setAttribute('role','img');
+  o.setAttribute('aria-label','Un instant partagé, 03:17. Le Chronographe LÀ, Éditions LÀ.');
+  o.innerHTML='<div class="place"></div><div class="bloc"><p class="etiquette">Un instant partagé</p><time class="heure">'+envoyee.heure+'</time>'+
+    '<p class="marque">Le Chronographe LÀ<span>Éditions LÀ</span></p></div>';
+  $('.place',o).replaceWith(sphere(false)); return o;
+}
+var META={
+  titre:envoyee.entree.type==='fragment' ? envoyee.heure+' · « '+envoyee.entree.lignes.join(' ')+' »' : envoyee.heure+' · '+envoyee.entree.mot+' — '+envoyee.entree.definition,
+  desc:'Un instant pour vous. Le Chronographe LÀ : des mots à découvrir, des instants à lire. Toutes les dix minutes, une nouvelle rencontre.',
+  site:'Éditions LÀ'};
+function vueApercu(){
+  var b=document.createElement('div'); b.className='banc';
+  var col=document.createElement('div'); var cad=document.createElement('div'); cad.className='cadre'; cad.style.cssText='width:min(600px,92vw);aspect-ratio:1200/630';
+  var o=og(); cad.appendChild(o); col.appendChild(cad); echelle(cad,o,1200);
+  var l=document.createElement('p'); l.className='legende'; l.innerHTML='<b>L’image d’aperçu</b> (1200 × 630). Elle s’affiche petite, au-dessus du lien : elle porte la sphère, l’heure et la promesse « Un instant partagé ». Le mot ou le fragment n’y est pas : trop petit pour être lu à cette taille, il passe dans le titre de l’aperçu, en vrai texte, que les messageries affichent lisiblement.';
+  col.appendChild(l);
+  var t=document.createElement('table'); t.className='meta'; t.innerHTML='<tbody><tr><td>Titre</td><td>'+META.titre+'</td></tr><tr><td>Description</td><td>'+META.desc+'</td></tr><tr><td>Site</td><td>'+META.site+'</td></tr><tr><td>Lien</td><td>chronographe.editionsla.com/m/0317-a1</td></tr></tbody>';
+  col.appendChild(t); b.appendChild(col);
+  // simulation d'une conversation
+  var conv=document.createElement('div'); conv.className='conv';
+  conv.innerHTML='<p class="qui">Simulation générique d’une messagerie</p><div class="bulle"><a href="#recu'+(enCadre?'-cadre':'')+'"><div class="img"></div><div class="txt"><p class="titre">'+META.titre+'</p><p class="desc">'+META.desc+'</p><p class="dom">chronographe.editionsla.com</p></div></a></div>'+
+    '<p class="bulle-msg">Je suis tombée sur cet instant, j’ai pensé à toi.</p>';
+  var mini=og(); mini.id=''; $('.img',conv).appendChild(mini); requestAnimationFrame(function(){ mini.style.transform='scale(.25)'; });
+  var c2=document.createElement('div'); c2.appendChild(conv);
+  var l2=document.createElement('p'); l2.className='legende'; l2.style.maxWidth='360px'; l2.textContent='À la taille réelle d’un téléphone. Toucher l’aperçu ouvre la minute reçue. Le message d’accompagnement est celui de l’expéditeur.';
+  c2.appendChild(l2); b.appendChild(c2); return b;
+}
+
+/* ---------- 3 · l'écran du destinataire ---------- */
+function vueRecu(){
+  var s=document.createElement('section'); s.className='recu'; s.setAttribute('aria-label','Le Chronographe LÀ');
+  s.innerHTML='<div class="barre"><a href="#recu">Éditions LÀ</a><button type="button" data-propos>Qu’est-ce que c’est ?</button></div>'+
+    '<p class="etat etiquette" data-etat>Un instant pour vous</p><div class="place"></div>'+
+    '<div class="change" data-bloc><time class="heure" data-heure></time><div class="phrase" data-phrase></div></div>'+
+    '<div class="explication" data-explication><p class="etiquette">Le Chronographe LÀ</p><p class="p">Des mots à découvrir. Des instants à lire.<span class="suite"> Toutes les dix minutes, une nouvelle rencontre.</span></p></div>'+
+    '<div class="agir"><button type="button" class="principal" data-decouvrir>Ouvrir le Chronographe</button></div>'+
+    '<div class="agir" hidden data-apres><button type="button" class="retour" data-revoir>Revoir l’instant partagé · '+envoyee.heure+'</button>'+
+    '<button type="button" class="secondaire" data-ajouter>Ajouter à mon écran d’accueil</button></div>';
+  $('.place',s).replaceWith(sphere(true));
+  var bloc=$('[data-bloc]',s), mode='partagee', abo;
+  function remplir(e){ $('[data-heure]',s).textContent=e.heure; $('[data-heure]',s).setAttribute('datetime',e.heure); $('[data-phrase]',s).innerHTML=phraseHTML(e); }
+  remplir(envoyee);
+  function bascule(vers){
+    var etat=$('[data-etat]',s);
+    var faire=function(){
+      if(vers==='actuelle'){ C.modeDirect(); remplir(C.etat()); etat.textContent='Votre instant'; $('[data-decouvrir]',s).parentNode.hidden=true; $('[data-apres]',s).hidden=false; $('[data-explication]',s).hidden=true; }
+      else { remplir(envoyee); etat.textContent='Un instant pour vous'; $('[data-decouvrir]',s).parentNode.hidden=false; $('[data-apres]',s).hidden=true; $('[data-explication]',s).hidden=false; }
+      mode=vers; bloc.classList.remove('sort'); etat.style.opacity='';
+    };
+    if(reduit){ faire(); return; }
+    bloc.classList.add('sort'); etat.style.opacity=0; setTimeout(faire,450);
+  }
+  // la minute actuelle suit l'horloge réelle ; la minute partagée, elle, ne bouge jamais
+  C.abonner(function(e){ if(mode==='actuelle' && e.mode==='direct') remplir(e); });
+  $('[data-decouvrir]',s).onclick=function(){ bascule('actuelle'); };
+  $('[data-revoir]',s).onclick=function(){ bascule('partagee'); };
+  $('[data-propos]',s).onclick=function(){ $('#d-propos').showModal(); };
+  $('[data-ajouter]',s).onclick=function(){ ChronoActions.ajouter({surMinute:true}); };
+  return s;
+}
+function vueParcours(){
+  var w=document.createElement('div');
+  var b=document.createElement('div'); b.className='banc';
+  [['apercu-cadre','1 · Le message reçu : l’aperçu du lien. Touchez-le.'],['recu-cadre','2 · La minute exacte envoyée, puis « Ouvrir le Chronographe » : la minute que vous vivez.']].forEach(function(x){
+    var col=document.createElement('div'); var t=document.createElement('div'); t.className='tel'; var f=document.createElement('iframe');
+    f.title=x[1]; f.src=location.pathname+'#'+x[0]; t.appendChild(f); col.appendChild(t);
+    var l=document.createElement('p'); l.className='legende'; l.style.maxWidth='390px'; l.textContent=x[1]; col.appendChild(l); b.appendChild(col); });
+  w.appendChild(b);
+  var n=document.createElement('div'); n.className='note';
+  n.innerHTML='<h2>Ce que fait l’écran de réception</h2><ul>'+
+   '<li>Il affiche la minute envoyée, à l’identique : heure, texte, version. Elle ne change pas, même si on la regarde à une autre heure.</li>'+
+   '<li>Il dit en une ligne ce qu’on reçoit (« Un instant pour vous ») et ce qu’est le Chronographe, sans publicité.</li>'+
+   '<li>« Ouvrir le Chronographe » remplace l’heure et le contenu par ceux de l’appareil du destinataire, en fondu ; la sphère continue sans interruption. « Revoir l’instant partagé » permet d’y revenir.</li>'+
+   '<li>Dans ce prototype, seuls les créneaux de 03:10 à 04:00 ont un contenu d’essai : ailleurs, « votre minute » affiche « À venir » avec l’heure réelle.</li></ul>'+
+   '<h2>Ce qu’il faudra pour les aperçus réels</h2><ul>'+
+   '<li>Les messageries lisent l’aperçu sans exécuter de code : chaque minute partagée doit avoir sa propre adresse avec son titre et son image, par exemple <i>chronographe.editionsla.com/m/0317-a1</i>, préparée par la construction du site une fois le corpus écrit.</li>'+
+   '<li>L’affichage exact varie selon les applications (recadrage, taille, cache) : à vérifier sur iMessage, WhatsApp, Signal, Messenger, LinkedIn et X avant la mise en ligne.</li></ul>';
+  w.appendChild(n); return w;
+}
+
+/* ---------- routage ---------- */
+function rendre(){
+  var h=(location.hash||'#carte').slice(1), cadre=/-cadre$/.test(h); enCadre=cadre; h=h.replace('-cadre','').replace(/^recu@.*/,'recu');
+  if(['carte','apercu','parcours','recu'].indexOf(h)<0) h='carte';
+  $$('#vue video').forEach(function(v){ v.pause(); v.removeAttribute('src'); v.load(); });
+  var main=$('#vue'); main.innerHTML=''; C.modeDirect();
+  if(cadre && h==='apercu'){ main.style.cssText='display:flex;justify-content:center;padding:40px 0;background:#fff;min-height:100svh'; var a=vueApercu().children[1]; main.appendChild(a); }
+  else { main.style.cssText=''; main.appendChild(h==='carte'?vueCarte(): h==='apercu'?vueApercu(): h==='parcours'?vueParcours(): vueRecu()); }
+  $('.proto').hidden=cadre;
+  $$('.proto [data-vue]').forEach(function(b){ b.setAttribute('aria-pressed',String(b.dataset.vue===h)); });
+  window.scrollTo(0,0);
+}
+$$('.proto [data-vue]').forEach(function(b){ b.onclick=function(){ location.hash=b.dataset.vue; }; });
+$$('[data-fermer]').forEach(function(b){ b.onclick=function(){ b.closest('dialog').close(); }; });
+addEventListener('hashchange',rendre);
+// Outil de relecture (prototype seulement) : choisir la minute envoyée parmi les 144 créneaux.
+(function(){ var s=document.getElementById('r-minute'), h, m;
+  for(h=0;h<24;h++) for(m=0;m<60;m+=10){ var k=(h<10?'0':'')+h+':'+(m?m:'00'), e=CORPUS_DEMO.creneaux[k]; if(!e) continue;
+    var v=k===C.creneau('03:17')?'03:17':k, o=document.createElement('option'); o.value=v;
+    o.textContent=v+' · '+(e.type==='mot' ? e.mot : '« '+e.lignes.join(' ').slice(0,38)+'… »'); s.appendChild(o); }
+  s.value=PARTAGE.heure;
+  s.onchange=function(){ try{ localStorage.setItem('chrono-la-minute',s.value); }catch(e){} location.reload(); };
+})();
+C.demarrer(); rendre();
+})();
+</script>
+</body>
+</html>

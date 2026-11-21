@@ -1,0 +1,4 @@
+exports/
+publication/
+.env/
+__pycache__/

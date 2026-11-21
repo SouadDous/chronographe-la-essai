@@ -1,0 +1,9 @@
+{
+  "_note": "Indications de présentation, séparées du texte de référence (le JSON éditorial n'est jamais modifié). Clé : identifiant du fichier éditorial. « paragraphes » découpe un fragment en blocs : leur réunion, avec une espace entre deux blocs, doit redonner exactement le texte de référence, sinon l'import s'arrête. Aucune séparation n'est appliquée automatiquement aux autres fragments.",
+  "la01-0310-v1": {
+    "paragraphes": [
+      "Quelqu’un voudrait que cette minute passe.",
+      "Quelqu’un voudrait qu’elle dure."
+    ]
+  }
+}

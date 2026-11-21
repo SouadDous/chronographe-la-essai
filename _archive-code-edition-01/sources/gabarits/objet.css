@@ -1,0 +1,58 @@
+/* Le Chronographe LÀ — l'objet ouvert (page d'accueil de la version d'essai).
+   Repris de la démonstration des compositions validée : composition horizontale sur ordinateur,
+   qui redevient verticale sur un écran étroit. La sphère, l'heure et le contenu suivent commun.css. */
+.ouvert{position:relative;min-height:100svh;display:flex;flex-direction:column;background:var(--ivoire)}
+/* versions d’essai : le bandeau prend sa place dans la hauteur de l’écran au lieu de s’y ajouter */
+body:has(> .essai + .ouvert){min-height:100svh;display:flex;flex-direction:column}
+.essai + .ouvert{min-height:0;flex:1 0 auto}
+.ouvert .barre{display:flex;justify-content:space-between;align-items:center;padding:10px clamp(12px,3vw,40px) 0;font-size:18px}
+.ouvert .barre a,.ouvert .barre button{min-height:48px;display:inline-flex;align-items:center;padding:0 8px;text-decoration:none}
+.ouvert .barre a:hover,.ouvert .barre button:hover{text-decoration:underline;text-underline-offset:5px}
+
+.signature{font-size:18px;letter-spacing:.02em;color:var(--encre)}
+.liens{display:flex;flex-wrap:wrap;gap:6px 28px;font-size:18px}
+.liens button{min-height:48px;padding:0 2px;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px;text-decoration-color:rgba(18,17,16,.35)}
+.liens button:hover{text-decoration-color:var(--encre)}
+.repere{font:16px var(--sans);color:var(--gris);margin-top:4px}
+.entree{opacity:1;transition:opacity .5s ease}
+.ouvert.arrivee .entree{opacity:0}
+
+/* 1 · Verticale : sphère, heure, phrase, signature */
+.v{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(8px,2svh,28px) 20px 34px}
+.v .sphere{--t:min(560px, 50svh, 88vw)}
+.v .heure{font-size:clamp(58px, 8svh, 96px);margin-top:calc(var(--t,0px) * 0);margin-top:clamp(-30px,-2svh,-8px)}
+.v .phrase{font-size:clamp(21px, 2.6svh, 26px);--mot:clamp(42px, 5.4svh, 60px);max-width:24em;margin-top:clamp(14px,2.4svh,28px)}
+.v .signature{margin-top:clamp(22px,4svh,44px)}
+.v .liens{justify-content:center;margin-top:clamp(14px,2.5svh,26px)}
+
+/* 2 · Horizontale (ordinateur) : la sphère d'un côté, l'heure et la phrase de l'autre */
+.h{flex:1;display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;column-gap:clamp(8px,2vw,40px);
+  max-width:1280px;width:100%;margin:0 auto;padding:0 clamp(20px,5vw,72px) 30px}
+.h .sphere{--t:min(700px, 74svh, 50vw)}
+.h .texte{padding-bottom:2svh}
+.h .texte:has(+ .texte){padding-bottom:0}   /* blocs de présentation : même respiration que la page reçue et la carte */
+.h .heure{font-size:clamp(84px, 9.5vw, 156px);margin-left:-.04em}
+.h .phrase{font-size:clamp(22px, 1.75vw, 28px);--mot:clamp(50px, 4.4vw, 72px);max-width:20em;margin-top:clamp(18px,3svh,34px)}
+.h .signature{margin-top:clamp(30px,6svh,64px)}
+.h .liens{margin-top:16px}
+/* sur un écran étroit, la composition horizontale redevient verticale */
+@media (max-width:860px), (max-aspect-ratio:1/1){
+  .h{display:flex;flex-direction:column;align-items:center;text-align:center;padding:8px 20px 34px}
+  .h .sphere{--t:min(520px, 50svh, 88vw)}
+  .h .heure{font-size:clamp(58px, 8svh, 96px);margin:clamp(-30px,-2svh,-8px) 0 0}
+  .h .phrase{font-size:clamp(21px, 2.6svh, 26px);--mot:clamp(42px, 5.4svh, 60px);margin-left:auto;margin-right:auto;max-width:22em}
+  .h .liens{justify-content:center}
+}
+/* téléphone : la sphère, l'heure et la phrase dans le premier écran */
+@media (max-width:520px){
+  .v .sphere,.h .sphere{--t:min(88vw, 38svh, 360px)}
+  .v .heure,.h .heure{font-size:clamp(54px,15vw,64px)}
+  .v .phrase,.h .phrase{font-size:21px;--mot:clamp(40px,11vw,46px);margin-top:12px}
+  .v .signature,.h .signature{margin-top:24px}
+  .liens{flex-direction:column;align-items:center;gap:0}
+}
+
+
+.h .phrase .sources{padding-left:0}
+.ouvert .phrase{transition:opacity .45s ease}
+.essai{font:15px/1.4 var(--sans);color:#5b5248;text-align:center;padding:8px 12px;border-bottom:1px solid var(--trait);background:#FAF8F5}

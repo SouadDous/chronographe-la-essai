@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Rendu (outil interne, jamais publié)</title>
+<link rel="stylesheet" href="/commun/commun.css">
+<style>body{margin:0;min-height:0;background:#fff}#r{position:relative;overflow:hidden}</style>
+</head>
+<body>
+<div id="r"></div>
+<script>
+/* Outil de rendu des visuels fixes, piloté par l'adresse :
+   #og/03:17                     → aperçu de lien 1200 × 630 (sphère, « Un instant partagé », heure, marque)
+   #carte/<JSON encodé>          → image à enregistrer 1080 × 1350, dessinée par /commun/carte.js :
+       {"heure":"03:17","notice":{type "mot" : mot, grammaire, definition | type "fragment" : lignes, attribution ;
+        "auteur" pour un invité},"promesse","invitation","adresse"}
+   La page signale la fin du rendu par document.body.dataset.pret = "1" (polices et image chargées). */
+(function(){
+var h=decodeURIComponent(location.hash.slice(1)), i=h.indexOf('/'), type=h.slice(0,i), arg=h.slice(i+1), r=document.getElementById('r');
+function esc(t){ return String(t).replace(/ ([»:;!?])/g,'\u00a0$1').replace(/« /g,'«\u00a0').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+var sph='<div class="sphere"><img src="/commun/media/b-fixe.jpg" alt=""></div>';
+if(type==='og'){
+  r.style.cssText='width:1200px;height:630px';
+  r.innerHTML='<div class="og">'+sph+'<div class="bloc"><p class="etiquette">Un instant partagé</p><time class="heure">'+esc(arg)+'</time><p class="marque">Le Chronographe LÀ<span>Éditions LÀ</span></p></div></div>';
+} else if(type==='carte'){
+  // L'image à enregistrer est dessinée par carte.js, le même code que sur le téléphone du lecteur.
+  var d=JSON.parse(arg); r.style.cssText='width:1080px;height:1350px';
+  var s=document.createElement('script'); s.src='/commun/carte.js';
+  s.onload=function(){ ChronoCarte.dessiner({heure:d.heure, contenu:d.contenu||d.notice, promesse:d.promesse, invitation:d.invitation, adresse:d.adresse})
+    .then(function(x){ r.appendChild(x.canvas); window.mesuresCarte=x.mesures; document.body.dataset.pret='1'; }); };
+  document.head.appendChild(s);
+  return;
+}
+var img=r.querySelector('img');
+Promise.all([document.fonts.ready, img.decode ? img.decode().catch(function(){}) : Promise.resolve()]).then(function(){
+  document.fonts.load('400 40px "EB Garamond"').then(function(){ requestAnimationFrame(function(){ document.body.dataset.pret='1'; }); }); });
+})();
+</script>
+</body>
+</html>

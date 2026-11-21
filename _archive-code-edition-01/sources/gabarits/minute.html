@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{TITRE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+{{ROBOTS}}<link rel="canonical" href="{{URL}}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{EDITEUR}}">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="{{URL}}">
+<meta property="og:title" content="{{TITRE}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:image" content="{{IMAGE}}">
+<meta property="og:image:secure_url" content="{{IMAGE}}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{IMAGE_ALT}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{TITRE}}">
+<meta name="twitter:description" content="{{DESCRIPTION}}">
+<meta name="twitter:image" content="{{IMAGE}}">
+<meta name="theme-color" content="#F6F3ED">
+<link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="{{NOM_COURT}}">
+<link rel="apple-touch-icon" href="/icones/apple-touch-icon.png">
+<link rel="icon" href="/icones/icone-192.png" sizes="192x192">
+<link rel="preload" href="/commun/polices/ebg-roman.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/commun/commun.css">
+</head>
+<body>
+{{BANDEAU_ESSAI}}<main class="recu" aria-label="{{NOM}}">
+  <div class="barre"><a href="{{SITE_EDITIONS}}">{{EDITEUR}}</a><button type="button" data-propos>Qu’est-ce que c’est ?</button></div>
+  <p class="etat etiquette" data-etat>{{ETAT}}</p>
+  <div class="sphere" data-sphere><img src="/commun/media/b-fixe.jpg" alt=""></div>
+  <div class="change" data-bloc><time class="heure" data-heure datetime="{{HEURE}}">{{HEURE}}</time><div class="phrase" data-phrase>{{NOTICE_HTML}}</div></div>
+  <div class="explication" data-explication><p class="etiquette">{{NOM}}</p><p class="p">{{PROMESSE}}<span class="suite"> {{INVITATION}}</span></p></div>
+  <div class="agir" data-avant><button type="button" class="principal" data-decouvrir>Ouvrir le Chronographe</button></div>
+  <div class="agir" hidden data-apres><button type="button" class="retour" data-revoir>Revoir l’instant partagé · {{HEURE}}</button>
+    <button type="button" class="secondaire" data-ajouter>Ajouter à mon écran d’accueil</button></div>
+</main>
+<dialog id="d-propos" aria-labelledby="t-propos"><button class="fermer" type="button" data-fermer>Fermer</button>
+  <h2 id="t-propos">{{NOM}}</h2><p>{{TEXTE_PROPOS}}</p></dialog>
+<dialog id="d-sources" aria-labelledby="t-sources"><button class="fermer" type="button" data-fermer>Fermer</button>
+  <h2 id="t-sources">Sources</h2><div data-liste-sources></div></dialog>
+<script type="application/json" id="minute">{{MINUTE_JSON}}</script>
+<script>window.CHRONO_ACTIONS={{ACTIONS_JSON}};</script>
+<script src="/commun/moteur.js"></script>
+<script src="/commun/actions.js"></script>
+<script src="/commun/recu.js"></script>
+</body>
+</html>

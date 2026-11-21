@@ -1,0 +1,2963 @@
+{
+ "_note": "Registre des textes publiés. Chaque entrée est une adresse définitive (/m/…) : on n'en retire jamais, on n'en modifie jamais. Vide tant que rien n'est en ligne. Rempli uniquement par construire_site.py --enregistrer.",
+ "textes": {
+  "c0000-a@1": {
+   "heure": "00:00",
+   "id": "c0000-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Le boulanger a ouvert la porte du four. Dans la rue vide, quelqu’un a ralenti."
+   ],
+   "id_source": "la01-0000-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "584c0480d0d9f2f8d6a5f1818f8cacf8ecdad7ea7c35995fe4bffbfc09e83320",
+   "adresses": "/m/0000-a1 … /m/0009-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0010-a@1": {
+   "heure": "00:10",
+   "id": "c0010-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Réminiscence",
+   "grammaire": "Nom féminin",
+   "definition": "Retour d’une impression ancienne dont on ne retrouve pas clairement l’origine. Un air ou une odeur paraît familier, sans que le souvenir se précise tout à fait.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9R1578",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0010-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "69aba1de0740e3c7f9a87ac84a2d2f86faf83719b9c19faec0b98abc71c51d36",
+   "adresses": "/m/0010-a1 … /m/0019-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0020-a@1": {
+   "heure": "00:20",
+   "id": "c0020-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Amble",
+   "grammaire": "Nom masculin · Allure animale",
+   "definition": "Manière de marcher où les deux pattes d’un même côté avancent ensemble, puis celles de l’autre côté. Elle se distingue du trot, qui associe les pattes en diagonale.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9A1410",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0020-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "3d8fa864fa4f0177e6075092d30e65d4af944e62b7a1768cdc9ce53c2cd1c632",
+   "adresses": "/m/0020-a1 … /m/0029-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0030-a@1": {
+   "heure": "00:30",
+   "id": "c0030-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "La recette disait « une pincée ». Il a regardé les doigts de sa mère."
+   ],
+   "id_source": "la01-0030-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "4ef81f949542d3b627911719f9533d4f897c00230591fcb235e1e331ccae8a6d",
+   "adresses": "/m/0030-a1 … /m/0039-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0040-a@1": {
+   "heure": "00:40",
+   "id": "c0040-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Apocryphe",
+   "grammaire": "Adjectif · À propos d’un écrit",
+   "definition": "Se dit d’un texte dont l’authenticité est douteuse ou qui est attribué au mauvais auteur. Une citation peut ainsi circuler sous une signature qui n’est pas la bonne.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9A2127",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0040-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "b476e6325ebf2409bd684521c3b2dc61d04ac473a3673412d6d4bdac7f4ac725",
+   "adresses": "/m/0040-a1 … /m/0049-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0050-a@1": {
+   "heure": "00:50",
+   "id": "c0050-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Elle avait gardé le ticket de cinéma. Le nom du film s’était effacé."
+   ],
+   "id_source": "la01-0050-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "8617cfe7a1bfc245e190a8b2a39717c7d0d4f592f502f77f7606c0cd8f2588ec",
+   "adresses": "/m/0050-a1 … /m/0059-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0100-a@1": {
+   "heure": "01:00",
+   "id": "c0100-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Bruire",
+   "grammaire": "Verbe intransitif",
+   "definition": "S’emploie pour un bruit léger qui se prolonge, comme celui du feuillage remué ou d’une source. Les sons s’y mêlent en un murmure indistinct.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9B2326",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0100-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "5dd179547cd247dcf232ee92611b73cff861434f931346225b983d5c893adc75",
+   "adresses": "/m/0100-a1 … /m/0109-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0110-a@1": {
+   "heure": "01:10",
+   "id": "c0110-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Elle ne savait pas quoi lui répondre. Elle a rapproché sa chaise."
+   ],
+   "id_source": "la01-0110-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "6127665f0dcda7e8fc8d90418f20447b35462177110a3eda1bbb21484d674c9d",
+   "adresses": "/m/0110-a1 … /m/0119-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0120-a@1": {
+   "heure": "01:20",
+   "id": "c0120-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "La couturière avait piqué l’aiguille dans sa manche. Elle l’a cherchée sur la table."
+   ],
+   "id_source": "la01-0120-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "4bb47f4a68088ce8e493af4de325b8b8a53afa13d9c61ff52d2aa3ff8c1d68c2",
+   "adresses": "/m/0120-a1 … /m/0129-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0130-a@1": {
+   "heure": "01:30",
+   "id": "c0130-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Litote",
+   "grammaire": "Nom féminin · Figure de style",
+   "definition": "Formulation volontairement retenue qui fait comprendre une idée plus forte. Dire « Ce n’est pas une mauvaise idée » peut ainsi laisser entendre qu’on la trouve excellente.",
+   "sources": [
+    {
+     "titre": "CNRTL — Trésor de la langue française",
+     "url": "https://www.cnrtl.fr/definition/litote",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0130-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "83cc6d884701da3482ae35807d6b7149df5107f708b9fc404cce5c18b8c67e8b",
+   "adresses": "/m/0130-a1 … /m/0139-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0140-a@1": {
+   "heure": "01:40",
+   "id": "c0140-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Sémaphore",
+   "grammaire": "Nom masculin · Marine",
+   "definition": "Poste établi sur la côte pour observer les mouvements en mer et communiquer avec les navires. Son nom rappelle les signaux visuels utilisés pour transmettre des messages.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9S1120",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0140-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "43f7c07af1981b815f13d0ca09cd501379b59246952c083de73da475854fe24a",
+   "adresses": "/m/0140-a1 … /m/0149-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0150-a@1": {
+   "heure": "01:50",
+   "id": "c0150-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Dans le hall de l’hôtel, deux inconnus parlaient à voix basse. Le veilleur connaissait déjà leurs prénoms."
+   ],
+   "id_source": "la01-0150-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "9da43664c2dc56c0a007f8bb425357eb7464dc54f78f91cc57f88e7f24ae7fc3",
+   "adresses": "/m/0150-a1 … /m/0159-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0200-a@1": {
+   "heure": "02:00",
+   "id": "c0200-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Patine",
+   "grammaire": "Nom féminin · Objets et matériaux",
+   "definition": "Aspect acquis par la surface d’un objet au fil du temps et de son usage. Cette transformation de couleur ou de texture peut aussi être provoquée artificiellement.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9P0976",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0200-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "71600962f468ef10e5b846e86639b4d98bcda601cc6015e7b46f02d20b5cd6a7",
+   "adresses": "/m/0200-a1 … /m/0209-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0210-a@1": {
+   "heure": "02:10",
+   "id": "c0210-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Il a joué quelques notes. Dans la pièce voisine, une voix a poursuivi."
+   ],
+   "id_source": "la01-0210-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "50b53b40eaa240cf3bfe279cfea5589f99a49d4d4813432dc5c7251ef22f7968",
+   "adresses": "/m/0210-a1 … /m/0219-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0220-a@1": {
+   "heure": "02:20",
+   "id": "c0220-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Ineffable",
+   "grammaire": "Adjectif · Littéraire",
+   "definition": "Qualifie ce que les mots ne parviennent pas à rendre. On peut éprouver une émotion avec force sans réussir à en donner une description qui semble juste.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9I1031",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0220-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "8a75120e4e61dfcb560597207a4e3a60c94ab4bf352a10537cb25f913e3e21ca",
+   "adresses": "/m/0220-a1 … /m/0229-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0230-a@1": {
+   "heure": "02:30",
+   "id": "c0230-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Il avait posé ses lunettes sur le livre. Les deux verres agrandissaient quelques mots."
+   ],
+   "id_source": "la01-0230-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "929270b8e94e3be82dbaa9d33e6ba7774b1cb5effcc807ec7c8c6535396e0b96",
+   "adresses": "/m/0230-a1 … /m/0239-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0240-a@1": {
+   "heure": "02:40",
+   "id": "c0240-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Elle disait ne pas savoir danser. Ses épaules suivaient déjà la musique."
+   ],
+   "id_source": "la01-0240-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "9c520d4cdf8767a3f66e9ccab8995230b30ad13bafa10be823758323f06835c6",
+   "adresses": "/m/0240-a1 … /m/0249-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0250-a@1": {
+   "heure": "02:50",
+   "id": "c0250-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Aubier",
+   "grammaire": "Nom masculin · Botanique",
+   "definition": "Dans un tronc, zone de bois récente située autour du cœur. Elle assure le transport de la sève brute, qui monte des racines vers les feuilles.",
+   "sources": [
+    {
+     "titre": "Usito — Université de Sherbrooke",
+     "url": "https://usito.usherbrooke.ca/lexies/mots/aubier",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0250-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "f08b1e861a5dd02cb12f928103b987402624979d4f15916e38b15c6afa91ce66",
+   "adresses": "/m/0250-a1 … /m/0259-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0300-a@1": {
+   "heure": "03:00",
+   "id": "c0300-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Hiatus",
+   "grammaire": "Nom masculin · Phonétique",
+   "definition": "Rencontre de deux voyelles prononcées dans des syllabes distinctes. Il peut apparaître entre deux mots ou à l’intérieur d’un seul, comme dans « chaos ».",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9H0652",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0300-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "005dcab693b8fe1acd81c8dc445cda717e68fa254b807c4988eae554ce160861",
+   "adresses": "/m/0300-a1 … /m/0309-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0310-a@1": {
+   "heure": "03:10",
+   "id": "c0310-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Quelqu’un voudrait que cette minute passe. Quelqu’un voudrait qu’elle dure."
+   ],
+   "presentation": {
+    "paragraphes": [
+     "Quelqu’un voudrait que cette minute passe.",
+     "Quelqu’un voudrait qu’elle dure."
+    ]
+   },
+   "id_source": "la01-0310-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "514ad2fdda8677c4d2530b8b36b15d4d366d52296edbaadbabd0c66e89b16c00",
+   "adresses": "/m/0310-a1 … /m/0319-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0320-a@1": {
+   "heure": "03:20",
+   "id": "c0320-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Étale",
+   "grammaire": "Adjectif · Marine",
+   "definition": "Se dit de la mer lorsque son niveau cesse momentanément de monter ou de descendre, autour de la pleine mer ou de la basse mer.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9E2789",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0320-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "64832b7392a1e20cd4e8285d271a568c2c4557a4219ccdb0cbf51e41f38e27b2",
+   "adresses": "/m/0320-a1 … /m/0329-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0330-a@1": {
+   "heure": "03:30",
+   "id": "c0330-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Le bébé dormait enfin. Dans la cuisine, ils se sont raconté leur journée en chuchotant."
+   ],
+   "id_source": "la01-0330-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "84e0c0fabdaa81afcf6eb94a436809c65d6a2028f0dea14fd73a35f2efaf63d1",
+   "adresses": "/m/0330-a1 … /m/0339-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0340-a@1": {
+   "heure": "03:40",
+   "id": "c0340-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Épure",
+   "grammaire": "Nom féminin · Dessin technique",
+   "definition": "Dessin qui ramène un volume à des vues planes, avec ses dimensions précises. Il permet d’étudier comment ses différentes parties se disposent les unes par rapport aux autres.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9E2372",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0340-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "e31383510980f16c0082a6401392cdaaa0087d4a5ee798b6f54065a8fbbf7433",
+   "adresses": "/m/0340-a1 … /m/0349-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0350-a@1": {
+   "heure": "03:50",
+   "id": "c0350-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Il avait laissé la radio allumée dans la pièce vide. En passant, elle a répondu au jeu."
+   ],
+   "id_source": "la01-0350-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "5cf75d7287610806a28666a74afcb7a61cdecd9326176707a7e01b4de4b68b9f",
+   "adresses": "/m/0350-a1 … /m/0359-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0400-a@1": {
+   "heure": "04:00",
+   "id": "c0400-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Il avait enlevé ses chaussures dans l’entrée. Il ne faisait pas ça chez tout le monde."
+   ],
+   "id_source": "la01-0400-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "ada9194f85c77bd9310db2fd150e829c191b4c3c02e69ef3202f052c2af73332",
+   "adresses": "/m/0400-a1 … /m/0409-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0410-a@1": {
+   "heure": "04:10",
+   "id": "c0410-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Frondaison",
+   "grammaire": "Nom féminin · Sens littéraire",
+   "definition": "Feuillage d’un arbre ou d’un ensemble d’arbres, considéré avec les branches qui le portent. On parle ainsi des frondaisons d’une forêt.",
+   "sources": [
+    {
+     "titre": "CNRTL — Trésor de la langue française",
+     "url": "https://www.cnrtl.fr/definition/frondaison",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0410-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "74e2d8e9627c5b8a1b2fca3f31d6d64c86e76766edbab049dadf01b130d7f679",
+   "adresses": "/m/0410-a1 … /m/0419-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0420-a@1": {
+   "heure": "04:20",
+   "id": "c0420-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Laconique",
+   "grammaire": "Adjectif",
+   "definition": "Qui s’exprime en très peu de mots, sans développer. Peut qualifier une personne, mais aussi une réponse ou un message remarquablement bref.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9L0062",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0420-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "adc2e218beadead3c8c5e0e092b3ea59b645e5ed7c35f7b8e71409848af81914",
+   "adresses": "/m/0420-a1 … /m/0429-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0430-a@1": {
+   "heure": "04:30",
+   "id": "c0430-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "En retournant la terre, elle a retrouvé une bille bleue. Elle l’a essuyée avec son pouce."
+   ],
+   "id_source": "la01-0430-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "74e99f5d439ea03635b261fc9be0a920189a5ed693cefb83b6c28bb187c630fe",
+   "adresses": "/m/0430-a1 … /m/0439-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0440-a@1": {
+   "heure": "04:40",
+   "id": "c0440-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Sente",
+   "grammaire": "Nom féminin · Littéraire ou régional",
+   "definition": "Chemin de faible largeur, généralement parcouru à pied, qui peut traverser des champs, des bois ou les pentes d’une montagne.",
+   "sources": [
+    {
+     "titre": "CNRTL — Trésor de la langue française",
+     "url": "https://www.cnrtl.fr/definition/sente",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0440-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "cb04e1c9513edc2fcb58d365ef7db99132360f25c976b88ec3657f7d8d5d0961",
+   "adresses": "/m/0440-a1 … /m/0449-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0450-a@1": {
+   "heure": "04:50",
+   "id": "c0450-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "La pluie avait cessé. Sous le tilleul, elle tombait encore."
+   ],
+   "id_source": "la01-0450-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "58e432741921af819ed5496cbc52f5942556f6bc7cb8c1b9084c1ced84cded48",
+   "adresses": "/m/0450-a1 … /m/0459-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0500-a@1": {
+   "heure": "05:00",
+   "id": "c0500-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Dans l’atelier, le tablier vide pendait à un clou. Ses poches étaient pleines."
+   ],
+   "id_source": "la01-0500-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "d55a71397f7294da4c48e2f691756c449e8c3a1364249b28f3de17a11ba1a7f2",
+   "adresses": "/m/0500-a1 … /m/0509-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0510-a@1": {
+   "heure": "05:10",
+   "id": "c0510-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Acquiescer",
+   "grammaire": "Verbe · Sens courant",
+   "definition": "Manifester que l’on accepte une proposition, une demande ou une opinion. Cet accord peut être exprimé par des paroles, mais aussi par un geste.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9A0427",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0510-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "46d1c4b6acbd051ad2ee62c3eedf2a95dff319a37ead4da21272a7cdedc5ccfb",
+   "adresses": "/m/0510-a1 … /m/0519-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0520-a@1": {
+   "heure": "05:20",
+   "id": "c0520-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Exuvie",
+   "grammaire": "Nom féminin · Zoologie",
+   "definition": "Enveloppe extérieure abandonnée par un animal lorsqu’il mue. Une exuvie peut conserver la forme du corps qui l’occupait, alors que l’animal l’a quittée.",
+   "sources": [
+    {
+     "titre": "INRAE — Encyclopédie Ephytia",
+     "url": "https://ephytia.inrae.fr/fr/C/16457/Hypp-encyclopedie-en-protection-des-plantes-ectophyte-exuvie",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0520-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "7670eeebc52ee2fa146a166e0517889642971dbe9458d0cab05c17fe947ce5fa",
+   "adresses": "/m/0520-a1 … /m/0529-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0530-a@1": {
+   "heure": "05:30",
+   "id": "c0530-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Le premier train a traversé la gare sans s’arrêter. Sur le quai, tous les visages l’ont suivi."
+   ],
+   "id_source": "la01-0530-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "d44c348912cc3043d62b89563de4776410660c937c212ffaccb934b20a7f1fe3",
+   "adresses": "/m/0530-a1 … /m/0539-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0540-a@1": {
+   "heure": "05:40",
+   "id": "c0540-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Le chemin était sec. Le chien avait gardé l’odeur de la rivière."
+   ],
+   "id_source": "la01-0540-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "245ad6ba7f645c6040b80243c9664a29c2f430d0a6e7fc7523f8a5fa2cb8305e",
+   "adresses": "/m/0540-a1 … /m/0549-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0550-a@1": {
+   "heure": "05:50",
+   "id": "c0550-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Arpège",
+   "grammaire": "Nom masculin · Musique",
+   "definition": "Façon de jouer un accord en faisant entendre ses notes l’une après l’autre, au lieu de les produire toutes ensemble.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9A2566",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0550-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "654c70f3187cda5e99d38af334418e9d8c7918b864b059d9b17e752720dfa331",
+   "adresses": "/m/0550-a1 … /m/0559-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0600-a@1": {
+   "heure": "06:00",
+   "id": "c0600-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Ombelle",
+   "grammaire": "Nom féminin · Botanique",
+   "definition": "Ensemble de fleurs dont les petits pédoncules partent d’un même point et s’écartent comme les rayons d’un parapluie.",
+   "sources": [
+    {
+     "titre": "CNRTL — Trésor de la langue française",
+     "url": "https://www.cnrtl.fr/definition/ombelle",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0600-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "d30b25e385ac9ba8cb726ba882bddd31227534c6330ad2b35bc2755c5cb78b63",
+   "adresses": "/m/0600-a1 … /m/0609-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0610-a@1": {
+   "heure": "06:10",
+   "id": "c0610-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Elle a cassé un œuf. Deux jaunes sont tombés dans le bol."
+   ],
+   "id_source": "la01-0610-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "5b175cc844cf860bb00b8e39824fa7a3c4504c82c2d542d2de6eabcb3c8fb91a",
+   "adresses": "/m/0610-a1 … /m/0619-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0620-a@1": {
+   "heure": "06:20",
+   "id": "c0620-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Il a retrouvé son gant au retour. Quelqu’un l’avait posé sur une branche."
+   ],
+   "id_source": "la01-0620-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "a2a96a9ef4d9e2bf6e8bf648581dfa2f05f343e7b8c5c88121f6cbbbf20fbece",
+   "adresses": "/m/0620-a1 … /m/0629-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0630-a@1": {
+   "heure": "06:30",
+   "id": "c0630-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Temporiser",
+   "grammaire": "Verbe intransitif",
+   "definition": "Choisir d’attendre avant d’agir ou de se prononcer, afin de gagner du temps et de laisser les circonstances devenir plus favorables.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9T0657",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0630-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "768b2707a3ae6a3959945a2cdc200f4d4d8848c94b64a2a07531658b79bd7e80",
+   "adresses": "/m/0630-a1 … /m/0639-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0640-a@1": {
+   "heure": "06:40",
+   "id": "c0640-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "La branche avait poussé de travers. C’était elle qui touchait la fenêtre."
+   ],
+   "id_source": "la01-0640-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "953bf16dd3e2acfd6f21f47bb5afc6b818f5c312fdf861ff66025f2a316e9efc",
+   "adresses": "/m/0640-a1 … /m/0649-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0650-a@1": {
+   "heure": "06:50",
+   "id": "c0650-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Ellipse",
+   "grammaire": "Nom féminin · Grammaire",
+   "definition": "Construction qui laisse certains mots sous-entendus, le contexte permettant de les retrouver. Dans « Léa choisit le thé, Paul le café », le verbe n’est pas répété.",
+   "sources": [
+    {
+     "titre": "CNRTL — Trésor de la langue française",
+     "url": "https://www.cnrtl.fr/definition/ellipse",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0650-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "dc7d60620a9d96985499a13312dfbda92d55dadb7e124f1ef0422b0128171713",
+   "adresses": "/m/0650-a1 … /m/0659-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0700-a@1": {
+   "heure": "07:00",
+   "id": "c0700-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Il a sauté dans la flaque. Le ciel s’est défait autour de ses bottes."
+   ],
+   "id_source": "la01-0700-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "b0475acc296bb7573dabcc25e1cdbd4e6d113dc44447013223d452e2d83df76d",
+   "adresses": "/m/0700-a1 … /m/0709-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0710-a@1": {
+   "heure": "07:10",
+   "id": "c0710-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Amer",
+   "grammaire": "Nom masculin · Navigation",
+   "definition": "Repère fixe et reconnaissable sur la côte ou en mer, utilisé depuis la mer pour se situer. Un clocher ou un relief particulier peut servir d’amer.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://dictionnaire-academie.fr/article/A9A1447",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0710-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "4a8672d5e1df7fdc9d9cf97e8b93fd5d86b7786b5b00129fb4e20fd9834c835c",
+   "adresses": "/m/0710-a1 … /m/0719-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0720-a@1": {
+   "heure": "07:20",
+   "id": "c0720-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Éclore",
+   "grammaire": "Verbe intransitif · Botanique et zoologie",
+   "definition": "Pour une fleur encore en bouton, s’ouvrir et déployer ses parties. Le mot s’emploie aussi, en zoologie, lorsqu’un animal sort de son œuf.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9E0262",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0720-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "0e7f57c493807dac20588eadf86c4861400b572a5aedc0d98ddc258145641ce8",
+   "adresses": "/m/0720-a1 … /m/0729-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0730-a@1": {
+   "heure": "07:30",
+   "id": "c0730-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Le menuisier a passé la paume sur le bois. Il avait senti quelque chose que ses yeux ne voyaient pas."
+   ],
+   "id_source": "la01-0730-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "3b48da5057a60141eaf44115fc3955b31423b878006ea9678e82df2cd0c99174",
+   "adresses": "/m/0730-a1 … /m/0739-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0740-a@1": {
+   "heure": "07:40",
+   "id": "c0740-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Moiré, moirée",
+   "grammaire": "Adjectif · Étoffes et reflets",
+   "definition": "Qui présente des zones ondulantes, tantôt mates, tantôt brillantes. Cet effet peut provenir du traitement d’un tissu ou rappeler les reflets changeants d’une surface.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9M2505",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0740-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "149e13093c8e0ce3f7d167243f329145eaee3fc5904a56bf406ede57bc65e1a9",
+   "adresses": "/m/0740-a1 … /m/0749-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0750-a@1": {
+   "heure": "07:50",
+   "id": "c0750-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Le chien s’est arrêté devant une maison. L’homme au bout de la laisse a attendu."
+   ],
+   "id_source": "la01-0750-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "1d85d06c8bc813d5e7e5044a9d116c2a407c1a186df5906cebaeb3965218754c",
+   "adresses": "/m/0750-a1 … /m/0759-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0800-a@1": {
+   "heure": "08:00",
+   "id": "c0800-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Il n’habitait plus le quartier. La boulangère lui a demandé : « Comme d’habitude ? »"
+   ],
+   "id_source": "la01-0800-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "8884d3f6dac4a87efad91a6b58443e960f8b4c6a01a91227f99553ea76f181e4",
+   "adresses": "/m/0800-a1 … /m/0809-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0810-a@1": {
+   "heure": "08:10",
+   "id": "c0810-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Circonspect, circonspecte",
+   "grammaire": "Adjectif",
+   "definition": "Se dit de quelqu’un qui examine la situation avant de se prononcer ou d’agir, et reste réservé pour éviter de s’engager imprudemment.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9C2363",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0810-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "540f8a30795a939ed9ad47db3d121fcd6680c103142f9b57fcb6d6d788d92f52",
+   "adresses": "/m/0810-a1 … /m/0819-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0820-a@1": {
+   "heure": "08:20",
+   "id": "c0820-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Barcarolle",
+   "grammaire": "Nom féminin · Musique",
+   "definition": "Pièce chantée ou instrumentale au rythme balancé, inspirée des chants des gondoliers vénitiens. Son mouvement évoque celui d’une barque.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9B0417",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0820-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "fe1a1ffc38f130da6198e33c50829cbc6e008e005e2302fb0800e05bcce31e1f",
+   "adresses": "/m/0820-a1 … /m/0829-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0830-a@1": {
+   "heure": "08:30",
+   "id": "c0830-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Elle avait quelque chose d’important à lui dire. Il avait encore de la mousse à raser sur une joue."
+   ],
+   "id_source": "la01-0830-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "2af7fa044575d0a5b3bef93496d20aa6591d204606113914be440630e4311056",
+   "adresses": "/m/0830-a1 … /m/0839-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0840-a@1": {
+   "heure": "08:40",
+   "id": "c0840-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Elle avait fini sa phrase. Sa main dessinait encore quelque chose dans l’air."
+   ],
+   "id_source": "la01-0840-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "e41cf775d3b1358d7d914708bc9b6378b3fb72682c322da79ea87d4f653c853b",
+   "adresses": "/m/0840-a1 … /m/0849-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0850-a@1": {
+   "heure": "08:50",
+   "id": "c0850-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Talweg",
+   "grammaire": "Nom masculin · Géographie",
+   "definition": "Pour tracer un talweg, on suit les points les plus bas d’une vallée. Cette ligne correspond généralement au chemin emprunté par un cours d’eau.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9T0174-A",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0850-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "cbe9811b9860d4017fa5ac9ca30fc54918d8f3517356cc57327461e4c78604e8",
+   "adresses": "/m/0850-a1 … /m/0859-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0900-a@1": {
+   "heure": "09:00",
+   "id": "c0900-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Ajouré, ajourée",
+   "grammaire": "Adjectif",
+   "definition": "Dont la surface comporte des ouvertures laissant passer la lumière. Ces vides participent au dessin de l’objet, comme dans une dentelle ou une grille décorative.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9A1042",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0900-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "366ba112956ffdc1534a070ebceec7bf1acbf0037874e49bc8517479c1b57976",
+   "adresses": "/m/0900-a1 … /m/0909-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0910-a@1": {
+   "heure": "09:10",
+   "id": "c0910-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "La vendeuse a emballé le cadeau. Il lui a demandé de laisser un coin ouvert pour le regarder encore."
+   ],
+   "id_source": "la01-0910-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "27ccba7ec806aafa7253061b8e51af92656a30a228a3c2bba8ea5ab58404fd38",
+   "adresses": "/m/0910-a1 … /m/0919-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0920-a@1": {
+   "heure": "09:20",
+   "id": "c0920-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Affable",
+   "grammaire": "Adjectif",
+   "definition": "Se dit d’une personne qui rend le contact agréable par sa façon de recevoir les autres, de leur parler et de les écouter.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9A0672",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0920-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "5c6adede4a5fded322dd7c177dae65c87d3d809a9344871d0ac4b15c13398d7f",
+   "adresses": "/m/0920-a1 … /m/0929-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0930-a@1": {
+   "heure": "09:30",
+   "id": "c0930-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Le vieux piano avait une touche muette. L’enfant revenait toujours à celle-là."
+   ],
+   "id_source": "la01-0930-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "454f2e2361d8f096468a7248d2b2a5ea761f7c62c7bde6d6938a84ff1eba3342",
+   "adresses": "/m/0930-a1 … /m/0939-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0940-a@1": {
+   "heure": "09:40",
+   "id": "c0940-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Polysémie",
+   "grammaire": "Nom féminin · Linguistique",
+   "definition": "Possibilité, pour un même mot, de prendre plusieurs sens selon son emploi. « Feuille » désigne ainsi une partie d’une plante, mais aussi une fine pièce de papier.",
+   "sources": [
+    {
+     "titre": "CNRTL — Trésor de la langue française",
+     "url": "https://www.cnrtl.fr/definition/polys%C3%A9mie",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-0940-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "47a023ba9e1f9476feaba442cba771cfe57e2afcfe3ef67fc43ce03f57f95c50",
+   "adresses": "/m/0940-a1 … /m/0949-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c0950-a@1": {
+   "heure": "09:50",
+   "id": "c0950-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "En vidant ses poches, il a retrouvé la liste. Il avait acheté tout autre chose."
+   ],
+   "id_source": "la01-0950-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "2b401d23b5bea20c8e290f7eaa737eadf47735ebeef9595fc577e4ef4aac9f48",
+   "adresses": "/m/0950-a1 … /m/0959-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1000-a@1": {
+   "heure": "10:00",
+   "id": "c1000-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Égrener",
+   "grammaire": "Verbe transitif · Sens figuré",
+   "definition": "Présenter un à un les éléments d’une suite, en les détachant les uns des autres. On peut ainsi égrener des souvenirs, des noms ou des notes.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9E0597",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1000-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "ab9ea5ec6d0196e5cc3e9609ba45abf7554811f39dc2c74e757a546ead1b4e38",
+   "adresses": "/m/1000-a1 … /m/1009-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1010-a@1": {
+   "heure": "10:10",
+   "id": "c1010-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Dans l’herbe tondue, un petit cercle de pâquerettes était resté debout."
+   ],
+   "id_source": "la01-1010-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "2ec6f83c695458d9493b5a4c023d29afb354929fcb2ad947a608be50b2d74a1a",
+   "adresses": "/m/1010-a1 … /m/1019-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1020-a@1": {
+   "heure": "10:20",
+   "id": "c1020-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Ressac",
+   "grammaire": "Nom masculin",
+   "definition": "Après avoir heurté le rivage ou un obstacle, les vagues refluent et rencontrent celles qui arrivent. Le ressac désigne l’agitation produite par ce mouvement.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9R2106",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1020-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "8808c8cf9b36f61811a61a1c93cd03099e105dee4c224dbee7875039b5fb92fc",
+   "adresses": "/m/1020-a1 … /m/1029-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1030-a@1": {
+   "heure": "10:30",
+   "id": "c1030-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "La bibliothécaire a retrouvé le titre à partir d’une couverture bleue et d’un souvenir de pluie."
+   ],
+   "id_source": "la01-1030-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "141f5af6df7749b6a149be33507afee66cb6b9f17502e514b51c9fef2f7dc76b",
+   "adresses": "/m/1030-a1 … /m/1039-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1040-a@1": {
+   "heure": "10:40",
+   "id": "c1040-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Au milieu du déménagement, ils se sont assis par terre. C’était déjà leur cuisine."
+   ],
+   "id_source": "la01-1040-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "ebfc86c8337c440609205558805fec47db1e0888f177f95f1af9088085b2b25e",
+   "adresses": "/m/1040-a1 … /m/1049-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1050-a@1": {
+   "heure": "10:50",
+   "id": "c1050-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Bistre",
+   "grammaire": "Nom masculin · Dessin",
+   "definition": "Matière colorante brune obtenue à partir de suie et utilisée pour dessiner ou peindre au lavis. Le mot désigne aussi sa teinte.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9B1258",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1050-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "4aeed80e64358b52bdb4deab741f935624f4acae4decd18d966dbc3d69ea0a3f",
+   "adresses": "/m/1050-a1 … /m/1059-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1100-a@1": {
+   "heure": "11:00",
+   "id": "c1100-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Le potier a posé le bol dans ses mains. Elle a cessé de demander à quoi il servirait."
+   ],
+   "id_source": "la01-1100-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "98c8bfd99ad0093aed4af2a9eeef10a1c18c5ce91e66681d0ca01a4aef897642",
+   "adresses": "/m/1100-a1 … /m/1109-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1110-a@1": {
+   "heure": "11:10",
+   "id": "c1110-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Périphrase",
+   "grammaire": "Nom féminin · Figure de style",
+   "definition": "Façon de nommer indirectement une personne ou une chose en décrivant l’une de ses caractéristiques. « L’astre du jour » désigne ainsi le soleil sans employer son nom.",
+   "sources": [
+    {
+     "titre": "CNRTL — Trésor de la langue française",
+     "url": "https://www.cnrtl.fr/definition/p%C3%A9riphrase",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1110-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "5f8279cb49dec625d7fd364d1acaaea486a23afe0addc173d74f400c511b52c8",
+   "adresses": "/m/1110-a1 … /m/1119-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1120-a@1": {
+   "heure": "11:20",
+   "id": "c1120-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Bocage",
+   "grammaire": "Nom masculin · Géographie",
+   "definition": "Paysage agricole où les champs et les prés sont séparés par des haies, souvent accompagnées de talus et d’arbres. Ces limites dessinent un réseau de parcelles.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9B1441",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1120-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "9d6fdee5397765a87cb2c90f2bf679a115819bace732357a3c7e3cddcb31c079",
+   "adresses": "/m/1120-a1 … /m/1129-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1130-a@1": {
+   "heure": "11:30",
+   "id": "c1130-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Le ballon avait franchi la haie. Une main inconnue l’a renvoyé."
+   ],
+   "id_source": "la01-1130-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "3fd03c63f95d8fadba4a71c0ed3f0cf0ac468e515826d87bddfa96c763928b7c",
+   "adresses": "/m/1130-a1 … /m/1139-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1140-a@1": {
+   "heure": "11:40",
+   "id": "c1140-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Se déliter",
+   "grammaire": "Verbe pronominal · Géologie",
+   "definition": "Se défaire en couches ou en feuillets, en suivant la structure de la roche. Les variations de température et les intempéries peuvent provoquer cette séparation.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9D1065",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1140-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "cac18526140a792402cf482a4884324826de460211713b81f29a4a6924f3f079",
+   "adresses": "/m/1140-a1 … /m/1149-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1150-a@1": {
+   "heure": "11:50",
+   "id": "c1150-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Sur le dossier de la chaise, le pull gardait encore la forme de ses coudes."
+   ],
+   "id_source": "la01-1150-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "f14dc75c835d171406e802cc5583f6acc6db4b49b865defaa74cfebcb9d5ea35",
+   "adresses": "/m/1150-a1 … /m/1159-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1200-a@1": {
+   "heure": "12:00",
+   "id": "c1200-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "L’enfant avait écrit son prénom dans la buée. Son père l’a contourné pour nettoyer la vitre."
+   ],
+   "id_source": "la01-1200-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "8b63f1f7320821402a01f3c6e191e87615d71beda12d245aeee763c18cb0ab9f",
+   "adresses": "/m/1200-a1 … /m/1209-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1210-a@1": {
+   "heure": "12:10",
+   "id": "c1210-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Flâner",
+   "grammaire": "Verbe intransitif",
+   "definition": "Marcher sans se presser et sans itinéraire impératif, en laissant les rencontres ou les choses aperçues infléchir la promenade.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9F0935",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1210-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "ced2b69efba39e42b18b5b30f240420562fb048f9092a453e86116efb220df94",
+   "adresses": "/m/1210-a1 … /m/1219-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1220-a@1": {
+   "heure": "12:20",
+   "id": "c1220-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Faîte",
+   "grammaire": "Nom masculin · Architecture",
+   "definition": "Partie la plus élevée d’un toit, notamment la ligne où se rejoignent ses deux versants. Par extension, le mot peut désigner un sommet.",
+   "sources": [
+    {
+     "titre": "CNRTL — Trésor de la langue française",
+     "url": "https://www.cnrtl.fr/definition/fa%C3%AEte",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1220-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "bb2087bf9479677880c143687aa743a053216892d45a2f41784bdc244dfcab96",
+   "adresses": "/m/1220-a1 … /m/1229-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1230-a@1": {
+   "heure": "12:30",
+   "id": "c1230-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Le chien avait deux gamelles. Il buvait dans l’arrosoir."
+   ],
+   "id_source": "la01-1230-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "712d4725fdc6cf8e28dec8d74cb8ae043ad32789bb26372df2ca1e711e557408",
+   "adresses": "/m/1230-a1 … /m/1239-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1240-a@1": {
+   "heure": "12:40",
+   "id": "c1240-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Pour déplacer le meuble, ils ont dû l’ouvrir. L’odeur de la maison précédente en est sortie."
+   ],
+   "id_source": "la01-1240-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "2080b099b0333329675525010250ed3df13abf01717b82f9bec1e08e98c9b2d4",
+   "adresses": "/m/1240-a1 … /m/1249-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1250-a@1": {
+   "heure": "12:50",
+   "id": "c1250-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Synesthésie",
+   "grammaire": "Nom féminin · Littérature",
+   "definition": "Image qui fait se rencontrer des sensations appartenant à des sens différents. Évoquer une « voix rugueuse », par exemple, associe ce que l’on entend à une impression de toucher.",
+   "sources": [
+    {
+     "titre": "Office québécois de la langue française",
+     "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/26500583/synesthesie",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1250-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "588472b9d3661f705fee115c380fee4f10d744a4a351168b82a66b8e3f20f18e",
+   "adresses": "/m/1250-a1 … /m/1259-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1300-a@1": {
+   "heure": "13:00",
+   "id": "c1300-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Elle lui a tendu le fruit encore chaud de soleil. Il l’a gardé un instant dans sa paume."
+   ],
+   "id_source": "la01-1300-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "202affbbf5e3e9097d376cb65b15a9bbb697dc7719dc4cbd5ff5a8bf301aecc4",
+   "adresses": "/m/1300-a1 … /m/1309-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1310-a@1": {
+   "heure": "13:10",
+   "id": "c1310-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Élaguer",
+   "grammaire": "Verbe transitif · Arboriculture",
+   "definition": "Couper certaines branches d’un arbre, notamment celles qui sont mortes, gênantes ou trop nombreuses, pour intervenir sur son développement et sa forme.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9E0637",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1310-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "46c4f053ba5fb1baa28ac3b283692040d8e85dbb06c098d9db72923ab39a1fa2",
+   "adresses": "/m/1310-a1 … /m/1319-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1320-a@1": {
+   "heure": "13:20",
+   "id": "c1320-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Sillage",
+   "grammaire": "Nom masculin · Navigation",
+   "definition": "Traînée dessinée sur l’eau par le déplacement d’un bateau. Elle rend son passage visible derrière lui, alors qu’il poursuit sa route.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9S1656",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1320-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "2a3de8075932ad9b9d7e517ba965643758c9da663fe2bf1fe5f0dbf1ab74679b",
+   "adresses": "/m/1320-a1 … /m/1329-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1330-a@1": {
+   "heure": "13:30",
+   "id": "c1330-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Le feu est passé au vert. Ils n’avaient pas terminé de se dire au revoir."
+   ],
+   "id_source": "la01-1330-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "57d849c77b18309cdf8a4d7433d405fe4bd3b725379cc48413592b14551611d9",
+   "adresses": "/m/1330-a1 … /m/1339-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1340-a@1": {
+   "heure": "13:40",
+   "id": "c1340-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Fuser",
+   "grammaire": "Verbe intransitif · Sens figuré",
+   "definition": "Surgir brusquement et se faire entendre avec vivacité. Des rires, des remarques ou des questions peuvent fuser avant qu’on ait le temps de répondre.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9F1918",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1340-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "e064c6ee486088c3f8fc20cdac9f8c9c28ac7dbb0f97b82343d4b6190fdfdaa8",
+   "adresses": "/m/1340-a1 … /m/1349-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1350-a@1": {
+   "heure": "13:50",
+   "id": "c1350-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Un courant d’air a tourné la page. Elle a lu la première ligne avant de revenir en arrière."
+   ],
+   "id_source": "la01-1350-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "feffbbb2d26e1f325b75d67a4d652833db8854e3d76a96026ba1573368ef1baf",
+   "adresses": "/m/1350-a1 … /m/1359-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1400-a@1": {
+   "heure": "14:00",
+   "id": "c1400-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Elle cherchait un mot. C’est un souvenir qui est venu."
+   ],
+   "id_source": "la01-1400-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "1e6ccbeb990cad7433420046845f4516b1bb0722aa65b9d136922d7e1519bdfb",
+   "adresses": "/m/1400-a1 … /m/1409-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1410-a@1": {
+   "heure": "14:10",
+   "id": "c1410-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Pruine",
+   "grammaire": "Nom féminin · Botanique",
+   "definition": "Voile de cire produit par certaines plantes à la surface de leurs fruits ou de leurs feuilles. Son aspect poudreux peut s’effacer sous les doigts.",
+   "sources": [
+    {
+     "titre": "Office québécois de la langue française",
+     "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8870475/pruine",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1410-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "5eb156666b9baa605c31ae3be3fd8254196e49641a21981c49f197ee1c71f6a5",
+   "adresses": "/m/1410-a1 … /m/1419-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1420-a@1": {
+   "heure": "14:20",
+   "id": "c1420-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Tacite",
+   "grammaire": "Adjectif",
+   "definition": "Qui se comprend à travers une attitude ou une situation, sans avoir été déclaré. Une entente peut ainsi guider deux personnes sans qu’elles aient eu besoin de la formuler.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9T0071",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1420-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "ddfce7b62a215d63e7bbe36d5952e3be72053b506354ac462c6f842b02a0f2ba",
+   "adresses": "/m/1420-a1 … /m/1429-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1430-a@1": {
+   "heure": "14:30",
+   "id": "c1430-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Il restait une vis sur la table. Ils ont regardé l’étagère en silence."
+   ],
+   "id_source": "la01-1430-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "07d94a0ddd7519c78d1aed48b3fb8b49335c014bed5c500412fcf33d748b406c",
+   "adresses": "/m/1430-a1 … /m/1439-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1440-a@1": {
+   "heure": "14:40",
+   "id": "c1440-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Palimpseste",
+   "grammaire": "Nom masculin · Manuscrits",
+   "definition": "Manuscrit écrit sur un support qui portait déjà un autre texte. L’écriture précédente a été effacée pour permettre de réutiliser la page.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9P0168",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1440-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "b62f2289178342feb5c9e5d4f7fcc00b8ab669d5b131f587c1fb29910ac7117f",
+   "adresses": "/m/1440-a1 … /m/1449-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1450-a@1": {
+   "heure": "14:50",
+   "id": "c1450-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Il lui a envoyé une photo de la lune. Elle est sortie sur le balcon."
+   ],
+   "id_source": "la01-1450-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "47a2812476c13a51e077c6bc205de3543cc3c3f8e0919183aaf56deaf687166b",
+   "adresses": "/m/1450-a1 … /m/1459-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1500-a@1": {
+   "heure": "15:00",
+   "id": "c1500-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Le sentier contournait un arbre qui n’était plus là."
+   ],
+   "id_source": "la01-1500-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "f1602923dbc78d8d8004d163a51f8a319c2c50e4499b07948bc19a674a6ad116",
+   "adresses": "/m/1500-a1 … /m/1509-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1510-a@1": {
+   "heure": "15:10",
+   "id": "c1510-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Tessiture",
+   "grammaire": "Nom féminin · Chant",
+   "definition": "Zone de notes qui convient le mieux à une voix, où elle chante avec aisance. Elle ne correspond pas nécessairement à toute l’étendue des sons que cette voix peut produire.",
+   "sources": [
+    {
+     "titre": "Larousse",
+     "url": "https://www.larousse.fr/dictionnaires/francais/tessiture/77494",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1510-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "80dd8279400aa23358d1b04b753dfb1519f32401e0b1a36dec32dc65063d48bf",
+   "adresses": "/m/1510-a1 … /m/1519-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1520-a@1": {
+   "heure": "15:20",
+   "id": "c1520-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "À la fin du repas, il lui a laissé la dernière fraise. Elle l’a coupée en deux."
+   ],
+   "id_source": "la01-1520-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "6e57da57bcc4cbb0c02ed5022f3c44350e9f85faab82346d9f37fb260bc03dc1",
+   "adresses": "/m/1520-a1 … /m/1529-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1530-a@1": {
+   "heure": "15:30",
+   "id": "c1530-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Chatoyer",
+   "grammaire": "Verbe intransitif",
+   "definition": "Présenter des reflets dont les couleurs varient avec l’éclairage. Une étoffe peut ainsi sembler changer de teinte dans ses plis ou lorsqu’on la déplace.",
+   "sources": [
+    {
+     "titre": "CNRTL — Trésor de la langue française",
+     "url": "https://www.cnrtl.fr/definition/chatoyer",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1530-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "0a70076b18449fb8f9201b20937bf66ea47c28d31da192aff26335c5371986eb",
+   "adresses": "/m/1530-a1 … /m/1539-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1540-a@1": {
+   "heure": "15:40",
+   "id": "c1540-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Repentir",
+   "grammaire": "Nom masculin · Peinture",
+   "definition": "Changement décidé par le peintre pendant la réalisation du tableau. Il reprend une partie de sa composition au lieu de conserver son premier choix.",
+   "sources": [
+    {
+     "titre": "Larousse",
+     "url": "https://www.larousse.fr/encyclopedie/peinture/repentir/154072",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1540-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "01529966dad171c9b87e10deb115c7f0df4a5952fb7eb138a747e4ebf95462f2",
+   "adresses": "/m/1540-a1 … /m/1549-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1550-a@1": {
+   "heure": "15:50",
+   "id": "c1550-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "La mer avait effacé les buts. Ils continuaient à jouer."
+   ],
+   "id_source": "la01-1550-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "e1fd28b4144ad0e059b8167fce097ead8f63499f47aff30097070359af7f30d7",
+   "adresses": "/m/1550-a1 … /m/1559-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1600-a@1": {
+   "heure": "16:00",
+   "id": "c1600-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Il a souri à quelqu’un derrière elle. Elle lui a rendu son sourire quand même."
+   ],
+   "id_source": "la01-1600-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "1dedf793ac550921255b14ece3fca91969a4a7dbeaf2cef318e4d1f419eb0871",
+   "adresses": "/m/1600-a1 … /m/1609-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1610-a@1": {
+   "heure": "16:10",
+   "id": "c1610-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Filigrane",
+   "grammaire": "Nom masculin · Papier",
+   "definition": "Dessin créé dans l’épaisseur du papier pendant sa fabrication. Il se révèle lorsque la lumière traverse la feuille, sans avoir été imprimé à sa surface.",
+   "sources": [
+    {
+     "titre": "Bibliothèque nationale de France",
+     "url": "https://www.bnf.fr/fr/le-rouleau-du-marquis-de-sade-restauration-dun-monument-litteraire",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1610-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "a9efd020176088f34ff7c49f0d774dd8af789295e3428d53bfffa8d2103d1bdf",
+   "adresses": "/m/1610-a1 … /m/1619-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1620-a@1": {
+   "heure": "16:20",
+   "id": "c1620-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Le chat s’était couché dans la valise. Elle a commencé par ranger l’autre moitié."
+   ],
+   "id_source": "la01-1620-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "7af1c9caf173a838623789dbdd4bc023fa6b2d8691cb4d54aab6e1878d882d3b",
+   "adresses": "/m/1620-a1 … /m/1629-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1630-a@1": {
+   "heure": "16:30",
+   "id": "c1630-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Une plume a traversé la cour. Personne n’a vu l’oiseau."
+   ],
+   "id_source": "la01-1630-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "8eb2f475da0c44973e4a08c1046d159e27a2179bf9aba8178b7647017ed1fe44",
+   "adresses": "/m/1630-a1 … /m/1639-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1640-a@1": {
+   "heure": "16:40",
+   "id": "c1640-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Sagacité",
+   "grammaire": "Nom féminin",
+   "definition": "Aptitude à comprendre ce qui n’est pas immédiatement évident, en repérant des indices ou des liens qui pourraient échapper à une observation moins attentive.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9S0131",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1640-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "efbc23eb7ce624f9a0211b8d1d5bc9c9df4fe5868d1cf93a26319ec932e0f34c",
+   "adresses": "/m/1640-a1 … /m/1649-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1650-a@1": {
+   "heure": "16:50",
+   "id": "c1650-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Aparté",
+   "grammaire": "Nom masculin · Théâtre",
+   "definition": "Réplique que le public entend, tandis que les autres personnages présents sont supposés ne pas l’entendre. Elle peut révéler une pensée que celui qui parle souhaite leur cacher.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9A2073",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1650-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "bff3a902c2bd6ffe3dfd05174750db307b84fe16b56c35a18abee9ef48537c53",
+   "adresses": "/m/1650-a1 … /m/1659-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1700-a@1": {
+   "heure": "17:00",
+   "id": "c1700-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Dans le livre d’occasion, quelqu’un avait souligné la phrase où elle venait de s’arrêter."
+   ],
+   "id_source": "la01-1700-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "cd9b11d6decfcae54a8835b654902be54ca71543cb80ab8fc08a347133cdde12",
+   "adresses": "/m/1700-a1 … /m/1709-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1710-a@1": {
+   "heure": "17:10",
+   "id": "c1710-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "La porte s’est refermée. Le parfum est resté dans l’entrée."
+   ],
+   "id_source": "la01-1710-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "429c2f518c0751b69cfee092c1525e71d660e7b9e8bc24747f0b78c1dd280e7d",
+   "adresses": "/m/1710-a1 … /m/1719-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1720-a@1": {
+   "heure": "17:20",
+   "id": "c1720-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Marcescent, marcescente",
+   "grammaire": "Adjectif · Botanique",
+   "definition": "Qualifie une partie végétale qui reste en place une fois fanée ou desséchée. Ainsi, certaines feuilles mortes demeurent longtemps accrochées aux branches.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9M1044",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1720-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "baafc8c3ae506b09de03f73f30aba69d0e3f1429409dcb37a31afdbaa72b644f",
+   "adresses": "/m/1720-a1 … /m/1729-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1730-a@1": {
+   "heure": "17:30",
+   "id": "c1730-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Il avait demandé son chemin. À la troisième rue, ils se tutoyaient."
+   ],
+   "id_source": "la01-1730-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "704105939cffc4b2c1ba461bded668d2282932059a0c7ef252c5deba00777255",
+   "adresses": "/m/1730-a1 … /m/1739-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1740-a@1": {
+   "heure": "17:40",
+   "id": "c1740-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Anamorphose",
+   "grammaire": "Nom féminin · Arts visuels",
+   "definition": "Image volontairement déformée. Pour en retrouver les proportions prévues, il faut l’observer depuis un emplacement précis ou utiliser un miroir adapté.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9A1649",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1740-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "984ad8729ed15c3704c32d4470652d6a964fd6878a65bf41fe9c5009f3ab05b8",
+   "adresses": "/m/1740-a1 … /m/1749-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1750-a@1": {
+   "heure": "17:50",
+   "id": "c1750-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Ravauder",
+   "grammaire": "Verbe transitif · Couture",
+   "definition": "Réparer à l’aiguille du linge ou un vêtement très usé. On reprend les trous et les endroits abîmés pour prolonger l’usage de la pièce.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9R0636",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1750-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "9b58a19d5bfcf15590cbd19cfccaec7cb4193e4f26433aad725c42510e122256",
+   "adresses": "/m/1750-a1 … /m/1759-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1800-a@1": {
+   "heure": "18:00",
+   "id": "c1800-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "La lettre commençait par « Je ne sais pas quoi te dire ». Il y avait trois pages."
+   ],
+   "id_source": "la01-1800-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "7630f6619cc16173d5f15577510a10c8229daa747230300377a67496eb74b652",
+   "adresses": "/m/1800-a1 … /m/1809-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1810-a@1": {
+   "heure": "18:10",
+   "id": "c1810-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Diaphane",
+   "grammaire": "Adjectif · Propriété d’une matière",
+   "definition": "Se dit d’une matière que la lumière traverse, mais qui ne permet pas de distinguer nettement les objets placés derrière elle.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9D2369",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1810-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "3780881fb4bb47de84df2260fa93406fd50432ec1e317ff6da21f49f296f2a0e",
+   "adresses": "/m/1810-a1 … /m/1819-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1820-a@1": {
+   "heure": "18:20",
+   "id": "c1820-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Ductile",
+   "grammaire": "Adjectif · Matériaux",
+   "definition": "Un matériau ductile supporte l’étirement en se déformant, au lieu de casser immédiatement. Cette propriété permet notamment de façonner des fils métalliques.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9D3329",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1820-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "75f3d8101bc2e8f7b4faec4d31b38436ab4c38916c819a9be3800fe047cde164",
+   "adresses": "/m/1820-a1 … /m/1829-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1830-a@1": {
+   "heure": "18:30",
+   "id": "c1830-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Elle a retiré une miette de son pull sans interrompre leur dispute."
+   ],
+   "id_source": "la01-1830-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "10d4ac1b818c0852056cbc9c62e6b91fa94b2a9e3e044e2d23dd1928cd50a843",
+   "adresses": "/m/1830-a1 … /m/1839-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1840-a@1": {
+   "heure": "18:40",
+   "id": "c1840-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Le vent avait emporté son chapeau. Elle courait derrière en riant, ce qui n’aidait pas."
+   ],
+   "id_source": "la01-1840-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "78eadc0378965b79e6926c9a71b5a31edc259a654775cb452799144f15bbddbc",
+   "adresses": "/m/1840-a1 … /m/1849-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1850-a@1": {
+   "heure": "18:50",
+   "id": "c1850-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Assonance",
+   "grammaire": "Nom féminin · Poésie",
+   "definition": "Retour d’un même son de voyelle dans une phrase ou un vers. Cet écho repose sur la prononciation, pas nécessairement sur les lettres employées.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9A2880",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1850-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "035a2efb4972421cd6832752054baf802013bf4936c54dfd7f25fc027e5e0530",
+   "adresses": "/m/1850-a1 … /m/1859-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1900-a@1": {
+   "heure": "19:00",
+   "id": "c1900-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Au téléphone, elle entendait la pluie chez lui. Chez elle, le soleil atteignait le bord du lit."
+   ],
+   "id_source": "la01-1900-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "633a9c873672d43545fab3fa536f2637aaec36aa12c576e7a7a1a77e2aade8e1",
+   "adresses": "/m/1900-a1 … /m/1909-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1910-a@1": {
+   "heure": "19:10",
+   "id": "c1910-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Mansuétude",
+   "grammaire": "Nom féminin",
+   "definition": "Douceur envers autrui, particulièrement lorsqu’on pourrait se montrer sévère. Elle se manifeste notamment dans la façon de considérer les fautes et d’accorder le pardon.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9M0580",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1910-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "497a0c8d5f610798a6b73d06c7fa500018e7e81f0673dc137224aa55217ef7bf",
+   "adresses": "/m/1910-a1 … /m/1919-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1920-a@1": {
+   "heure": "19:20",
+   "id": "c1920-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Estran",
+   "grammaire": "Nom masculin · Géographie littorale",
+   "definition": "Sur une côte soumise aux marées, espace où la mer avance puis se retire. Ses limites correspondent aux niveaux des plus hautes et des plus basses eaux.",
+   "sources": [
+    {
+     "titre": "Shom — Glossaire",
+     "url": "https://refmar.shom.fr/glossaire/e",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1920-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "85a61b669bce2a58c9a873c33eab9d28243666c6804f5973b5b0eedd7fe11204",
+   "adresses": "/m/1920-a1 … /m/1929-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1930-a@1": {
+   "heure": "19:30",
+   "id": "c1930-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "L’enfant lui a demandé de fermer les yeux. Elle a senti un caillou tiède dans sa main."
+   ],
+   "id_source": "la01-1930-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "b824acbff0bbfab146d5f9875185cb870f46fe01540f71716215a0e08a79d2e7",
+   "adresses": "/m/1930-a1 … /m/1939-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1940-a@1": {
+   "heure": "19:40",
+   "id": "c1940-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Affleurer",
+   "grammaire": "Verbe intransitif · Sens figuré",
+   "definition": "Se manifester discrètement, sans être pleinement exprimé. Une inquiétude peut ainsi affleurer dans une hésitation, un regard ou le ton d’une voix.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9A0750",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-1940-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "8fc8d258a3c8f52188cb54b2266189444a00a91a75dc60d32669d69a926aafea",
+   "adresses": "/m/1940-a1 … /m/1949-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c1950-a@1": {
+   "heure": "19:50",
+   "id": "c1950-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "La pianiste avait soulevé les mains. Dans la salle, personne ne bougeait encore."
+   ],
+   "id_source": "la01-1950-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "645d4a9bdfc38df365c511c17fe57528f743f4d837a8a061afb51e93e0975747",
+   "adresses": "/m/1950-a1 … /m/1959-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2000-a@1": {
+   "heure": "20:00",
+   "id": "c2000-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Elle a sorti deux tasses avant de lui demander s’il avait le temps."
+   ],
+   "id_source": "la01-2000-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "c81ab89d6e90087f85ba8ceeef6dc94c5902d3c77b8ce0c7439434b81e4f0bc4",
+   "adresses": "/m/2000-a1 … /m/2009-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2010-a@1": {
+   "heure": "20:10",
+   "id": "c2010-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Camaïeu",
+   "grammaire": "Nom masculin · Peinture",
+   "definition": "Peinture construite autour d’une seule couleur, déclinée en tons plus clairs ou plus foncés. Ces variations permettent de dessiner les formes et de suggérer les volumes.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9C0362",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-2010-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "fa20e11156c226d17ccfd0a83c71d4333171a25e19572c3d7119400a4c87a028",
+   "adresses": "/m/2010-a1 … /m/2019-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2020-a@1": {
+   "heure": "20:20",
+   "id": "c2020-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Sur le dessin de l’enfant, le cheval n’avait que trois jambes. Il galopait."
+   ],
+   "id_source": "la01-2020-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "c2525655f1bdc31f222cdad397a16f4df0319eedf732321c8795587b5d766d68",
+   "adresses": "/m/2020-a1 … /m/2029-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2030-a@1": {
+   "heure": "20:30",
+   "id": "c2030-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Le marchand lui a choisi une pêche pour aujourd’hui et une autre pour demain."
+   ],
+   "id_source": "la01-2030-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "a81bb084c69f03d0b52278629535710f05806d241e7f9019e3dcb00c67479393",
+   "adresses": "/m/2030-a1 … /m/2039-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2040-a@1": {
+   "heure": "20:40",
+   "id": "c2040-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Velléité",
+   "grammaire": "Nom féminin",
+   "definition": "Intention qui ne se transforme pas en action, faute d’une volonté assez ferme ou durable. On envisage de faire, sans vraiment s’y engager.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9V0317",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-2040-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "38a47541568feeb4e07b6ebd23d9929f7349e9686bd1b8a6d10efacb5336920a",
+   "adresses": "/m/2040-a1 … /m/2049-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2050-a@1": {
+   "heure": "20:50",
+   "id": "c2050-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Lisière",
+   "grammaire": "Nom féminin · Dans un paysage forestier",
+   "definition": "Bord d’un bois ou d’une forêt, au contact d’un autre milieu. La séparation peut être nette ou former une transition où la végétation change progressivement.",
+   "sources": [
+    {
+     "titre": "Office national des forêts",
+     "url": "https://www.onf.fr/onf/%2B/86c::entre-foret-et-tram-une-lisiere-forestiere-progressive-pour-la-biodiversite-de-la-foret-de-saint-germain.html",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-2050-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "02be73e7ae58f90773ab57046abc57f31697d38c50ca1b97a71190378aa90a52",
+   "adresses": "/m/2050-a1 … /m/2059-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2100-a@1": {
+   "heure": "21:00",
+   "id": "c2100-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Il a reconnu son écriture sur l’enveloppe. Il a attendu d’être seul pour l’ouvrir."
+   ],
+   "id_source": "la01-2100-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "0b9b46d737391b13180f7d573fbab6937ffc2ec79dc9b9aa2e00509b15b3d412",
+   "adresses": "/m/2100-a1 … /m/2109-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2110-a@1": {
+   "heure": "21:10",
+   "id": "c2110-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Rémanence",
+   "grammaire": "Nom féminin · Sciences",
+   "definition": "Prolongement d’un effet au-delà de l’action qui l’a produit. Un matériau peut, par exemple, rester aimanté alors que le champ magnétique extérieur a été supprimé.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9R1519",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-2110-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "a49084f988c1da0f3af8f80af644e155cd2eb9549a3b04da62df2250503b70d0",
+   "adresses": "/m/2110-a1 … /m/2119-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2120-a@1": {
+   "heure": "21:20",
+   "id": "c2120-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Sourdine",
+   "grammaire": "Nom féminin · Musique",
+   "definition": "Accessoire ou mécanisme qui atténue le son d’un instrument tout en modifiant son timbre. Sur un violon, une sourdine peut se fixer au chevalet.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9S2311",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-2120-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "caad9641cc1be6d2bddfc5806739698db19afe9d50eaa82fa1ef7a12567534e9",
+   "adresses": "/m/2120-a1 … /m/2129-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2130-a@1": {
+   "heure": "21:30",
+   "id": "c2130-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Dans le linge qui séchait, leurs chemises se touchaient."
+   ],
+   "id_source": "la01-2130-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "a0a2aa30dea738a89bf6720b2584db65220e92ebc4615bf9641bee45bbccc4e8",
+   "adresses": "/m/2130-a1 … /m/2139-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2140-a@1": {
+   "heure": "21:40",
+   "id": "c2140-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Dilection",
+   "grammaire": "Nom féminin · Littéraire, sens étendu",
+   "definition": "Attachement privilégié à une personne ou à une chose, qui occupe une place à part parmi nos affections ou nos goûts.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9D2512",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-2140-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "eaf91ddc5b442449620fb29c9c2ff2da7beb5f934ad2a3a3d76e077629a4b651",
+   "adresses": "/m/2140-a1 … /m/2149-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2150-a@1": {
+   "heure": "21:50",
+   "id": "c2150-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Dans la vitre du train, les arbres passaient sur son visage."
+   ],
+   "id_source": "la01-2150-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "previously_composed",
+   "lettre": "a",
+   "empreinte": "550cd3e8e4e513a8f8c5fb4437382e909b0e3c48fc8fc2408f4d5d6c20660a69",
+   "adresses": "/m/2150-a1 … /m/2159-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2200-a@1": {
+   "heure": "22:00",
+   "id": "c2200-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Elle a ri avant qu’il ait fini. Il a oublié la suite."
+   ],
+   "id_source": "la01-2200-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "64a2a4d9778f432d5a2e86953e3022fe49cf8b09edd785c32e355c9eef389a78",
+   "adresses": "/m/2200-a1 … /m/2209-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2210-a@1": {
+   "heure": "22:10",
+   "id": "c2210-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Évanescent, évanescente",
+   "grammaire": "Adjectif",
+   "definition": "Qui s’efface peu à peu jusqu’à devenir difficile à percevoir. Le mot peut qualifier une lumière, une image ou une impression dont la présence semble se dissoudre.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9E3106",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-2210-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "73ed3bbaf693738ccca3efcc9de1d783be90f2ef942a13c1c8c08776c3fcee2a",
+   "adresses": "/m/2210-a1 … /m/2219-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2220-a@1": {
+   "heure": "22:20",
+   "id": "c2220-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Ils n’avaient plus rien à se raconter. Elle a remis de l’eau à chauffer."
+   ],
+   "id_source": "la01-2220-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "f67c1b60ed00fecca06ed2b95168b0630e83abaad42ab02a0ca378d79a63bf9a",
+   "adresses": "/m/2220-a1 … /m/2229-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2230-a@1": {
+   "heure": "22:30",
+   "id": "c2230-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Césure",
+   "grammaire": "Nom féminin · Poésie",
+   "definition": "Séparation rythmique à l’intérieur d’un vers. Dans l’alexandrin classique, elle intervient après la sixième syllabe et partage le vers en deux parties.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9C1447",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-2230-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "d6645b4f12beb8af6bd4fcc99dea7ff00789233e4baebb620b20b2f99a55607b",
+   "adresses": "/m/2230-a1 … /m/2239-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2240-a@1": {
+   "heure": "22:40",
+   "id": "c2240-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Glacis",
+   "grammaire": "Nom masculin · Peinture",
+   "definition": "Voile de peinture transparente ajouté par-dessus une première couche colorée. Les teintes du dessous restent visibles, mais la superposition transforme leur apparence.",
+   "sources": [
+    {
+     "titre": "CNRTL — Trésor de la langue française",
+     "url": "https://www.cnrtl.fr/definition/glacis",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-2240-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "7f9d2cdac4371e79e40fcba9bfbcb2133675f7e63fbeeb1473f7e76cc884903f",
+   "adresses": "/m/2240-a1 … /m/2249-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2250-a@1": {
+   "heure": "22:50",
+   "id": "c2250-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "L’enfant s’était endormi. Son père a continué l’histoire, à voix plus basse."
+   ],
+   "id_source": "la01-2250-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "b9ae13b789882f367353cea0d7f94471e92a6805a23904d7e60a2736c0cdffe2",
+   "adresses": "/m/2250-a1 … /m/2259-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2300-a@1": {
+   "heure": "23:00",
+   "id": "c2300-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Entrelacs",
+   "grammaire": "Nom masculin · Arts décoratifs",
+   "definition": "Décor dans lequel plusieurs lignes se croisent et semblent passer les unes entre les autres. Leurs parcours composent un réseau plutôt qu’une succession de motifs séparés.",
+   "sources": [
+    {
+     "titre": "Dictionnaire de l’Académie française",
+     "url": "https://www.dictionnaire-academie.fr/article/A9E1960",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-2300-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "9e8807058393d6692e01db8cdf0a4ad70a7bd323dec19c494dec6f355697daf8",
+   "adresses": "/m/2300-a1 … /m/2309-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2310-a@1": {
+   "heure": "23:10",
+   "id": "c2310-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Il lui a demandé de répéter. Il avait très bien entendu."
+   ],
+   "id_source": "la01-2310-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "d03cf60bf3c47a2f594df54e377a926250a77c47afe32173a11e69bf1f543211",
+   "adresses": "/m/2310-a1 … /m/2319-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2320-a@1": {
+   "heure": "23:20",
+   "id": "c2320-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Le serveur avait retourné les chaises. Il avait laissé les leurs."
+   ],
+   "id_source": "la01-2320-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "6c37cddeef9e76d8a65a0de541458d41b60603d461f99e6febe1b55fa9caf246",
+   "adresses": "/m/2320-a1 … /m/2329-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2330-a@1": {
+   "heure": "23:30",
+   "id": "c2330-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Accalmie",
+   "grammaire": "Nom féminin · À propos du temps",
+   "definition": "Interruption ou atténuation passagère du mauvais temps. Le vent ou la pluie se calment, sans que cela annonce nécessairement la fin de la perturbation.",
+   "sources": [
+    {
+     "titre": "CNRTL — Trésor de la langue française",
+     "url": "https://www.cnrtl.fr/definition/accalmie",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-2330-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "d880d33ff0cdb2fd50d73856ff9790593a823079b1976be8908c743e0ac3a302",
+   "adresses": "/m/2330-a1 … /m/2339-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2340-a@1": {
+   "heure": "23:40",
+   "id": "c2340-a",
+   "version": 1,
+   "type": "mot",
+   "mot": "Pénombre",
+   "grammaire": "Nom féminin · Sens courant",
+   "definition": "Lumière faible qui laisse les choses partiellement dans l’ombre. On distingue encore les formes, mais leurs détails deviennent moins nets.",
+   "sources": [
+    {
+     "titre": "CNRTL — Trésor de la langue française",
+     "url": "https://www.cnrtl.fr/definition/p%C3%A9nombre",
+     "usage": "verification_du_sens"
+    }
+   ],
+   "id_source": "la01-2340-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "75d90a771f53a49d15642e6ad0980cc757b7bde28fbf617299e12bc2ccbe68a4",
+   "adresses": "/m/2340-a1 … /m/2349-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  },
+  "c2350-a@1": {
+   "heure": "23:50",
+   "id": "c2350-a",
+   "version": 1,
+   "type": "fragment",
+   "lignes": [
+    "Ils avaient dit « encore cinq minutes ». Aucun des deux ne regardait l’heure."
+   ],
+   "id_source": "la01-2350-v1",
+   "editeur": "Éditions LÀ",
+   "statut": "proposed_for_review",
+   "lettre": "a",
+   "empreinte": "6128b7b6a0772b36bdcc56f04c2a82c092e30f4c3b182037ac8b5af6b2846cfb",
+   "adresses": "/m/2350-a1 … /m/2359-a1",
+   "edition_graphique": "s1",
+   "enregistre": "2026-11-16"
+  }
+ }
+}

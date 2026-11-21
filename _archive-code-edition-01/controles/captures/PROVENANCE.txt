@@ -1,0 +1,6 @@
+Captures prises le 2026-11-16 19:05 dans Chrome, sur la construction essai-github, servie sous /chronographe-la-essai/
+Version de la construction (service worker) : 8aa40f7816a7
+Bandeau : Version d’essai — adresse non diffusée
+Empreintes : index.html 155d1ebf1c78a200 · m/0317-a1/index.html 949599eb356f7529 · commun/carte.js e800e80e5d16897f
+Fichiers : chronographe-0317-390x844.png, partage-0317-390x844.png, chronographe-1257-1440x900.png, reception-temoin-0317-390x844.png, reception-synesthesie-390x844.png, reception-aparte-1440x900.png, reception-evanescent-320x568.png, carte-0007.png, carte-0317.png, carte-0347.png, carte-0817.png, carte-1257.png, carte-1657.png
+Les cartes sont les fichiers téléchargés par le bouton « Enregistrer l’image » (ordinateur), pas des reconstitutions.

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Le Chronographe LÀ — la sphère, deux compositions (prototype privé)</title>
+<meta name="robots" content="noindex, nofollow">
+<!--FONTS-->
+<style>
+:root{--papier:#FAF8F5;--ivoire:#F6F3ED;--encre:#121110;--gris:#4B453F;--trait:#D9D2C6;--noir:#161412;
+  --serif:"EB Garamond",Garamond,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--papier);color:var(--encre);font-family:var(--serif);-webkit-font-smoothing:antialiased;min-height:100svh}
+button,a{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--encre);outline-offset:3px;border-radius:6px}
+[hidden]{display:none!important}
+
+/* Barre du prototype (hors œuvre) */
+.proto{position:sticky;top:0;z-index:50;background:rgba(250,248,245,.95);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--trait);font:500 15px/1.25 var(--sans);padding:8px 12px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:center}
+.proto .grp{display:flex;gap:6px;align-items:center}
+.proto .lab{color:#5b5248}
+.proto button{border:1px solid var(--trait);border-radius:999px;padding:7px 12px;min-height:38px;background:#fff;white-space:nowrap}
+.proto button[aria-pressed="true"]{background:var(--encre);color:#fff;border-color:var(--encre)}
+@media (max-width:700px){.proto{position:static;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;scrollbar-width:none}.proto .lab{display:none}}
+
+/*CONSERVE*/
+
+/* ==================================================================
+   L'œuvre ouverte : la sphère seule, entière ; les mots à côté, en noir sur ivoire
+   ================================================================== */
+.sphere{--t:520px;position:relative;width:var(--t);height:var(--t);flex:none}
+.sphere video,.sphere img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;
+  /* le fond de l'animation se fond dans l'ivoire : seule la bulle reste */
+  -webkit-mask-image:radial-gradient(circle at 50% 47%, #000 0, #000 calc(var(--t) * .395), transparent calc(var(--t) * .49));
+          mask-image:radial-gradient(circle at 50% 47%, #000 0, #000 calc(var(--t) * .395), transparent calc(var(--t) * .49))}
+
+.ouvert{position:relative;min-height:calc(100svh - 56px);display:flex;flex-direction:column;background:var(--ivoire)}
+.ouvert .barre{display:flex;justify-content:space-between;align-items:center;padding:10px clamp(12px,3vw,40px) 0;font-size:18px}
+.ouvert .barre a,.ouvert .barre button{min-height:48px;display:inline-flex;align-items:center;padding:0 8px;text-decoration:none}
+.ouvert .barre a:hover,.ouvert .barre button:hover{text-decoration:underline;text-underline-offset:5px}
+.heure{font-weight:400;font-variant-numeric:lining-nums tabular-nums;letter-spacing:-.005em;line-height:.9;display:block}
+/* L'heure passe toujours au-dessus de la sphère et de son halo : chiffres entièrement noirs et nets. */
+.heure{position:relative;z-index:2}
+.sphere{z-index:0}
+.phrase{font-weight:400;text-wrap:balance;transition:opacity .45s ease}
+.phrase .a-ecrire{font-style:italic;color:var(--gris);font-size:.8em}
+/* La notice : mot, nature, définition — mêmes règles que les pages publiées (commun.css) */
+.phrase .mot{font-size:var(--mot,1.8em);line-height:1.04;letter-spacing:-.005em;hyphens:manual;overflow-wrap:normal;word-break:normal}
+.phrase .mot .forme{white-space:nowrap}
+.phrase .nature{font-style:italic;color:var(--gris);font-size:max(18px,.8em);margin-top:.45em;line-height:1.3}
+.phrase .definition{margin-top:.55em;line-height:1.32}
+/* Le fragment : le texte seul, en romain, plus grand que la définition ; l'attribution en italique gris (le titre en romain).
+   Rien d'autre que la typographie ne distingue un fragment d'un mot. */
+.phrase .fragment .texte{font-size:var(--frag,1.22em);line-height:1.28}
+.phrase .fragment .texte+.texte{margin-top:.2em}
+.phrase .attribution{font-style:italic;color:var(--gris);font-size:max(18px,.8em);margin-top:.85em;line-height:1.3}
+.phrase .attribution cite{font-style:normal}
+.phrase .credit{font-style:italic;color:var(--gris);font-size:max(18px,.72em);margin-top:.7em}
+
+.phrase .voir{margin-top:.2em}
+.phrase .sources{font-size:max(17px,.75em);color:var(--gris);text-decoration:underline;text-underline-offset:5px;text-decoration-color:rgba(18,17,16,.3);min-height:44px;padding:0 4px}
+.h .phrase .sources{padding-left:0}
+.liste-sources{list-style:none;margin-top:6px}
+.liste-sources li{font-size:19px;line-height:1.4;padding:10px 0;border-top:1px solid var(--trait)}
+.liste-sources a{color:var(--encre);text-underline-offset:4px}
+.proto select{font:inherit;border:1px solid var(--trait);border-radius:999px;padding:7px 10px;min-height:38px;background:#fff;max-width:min(70vw,360px)}
+.proto #r-prec,.proto #r-suiv{min-width:38px;padding:7px 0}
+.signature{font-size:18px;letter-spacing:.02em;color:var(--encre)}
+.liens{display:flex;flex-wrap:wrap;gap:6px 28px;font-size:18px}
+.liens button{min-height:48px;padding:0 2px;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px;text-decoration-color:rgba(18,17,16,.35)}
+.liens button:hover{text-decoration-color:var(--encre)}
+.repere{font:16px var(--sans);color:var(--gris);margin-top:4px}
+.entree{opacity:1;transition:opacity .5s ease}
+.ouvert.arrivee .entree{opacity:0}
+
+/* 1 · Verticale : sphère, heure, phrase, signature */
+.v{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(8px,2svh,28px) 20px 34px}
+.v .sphere{--t:min(560px, 50svh, 88vw)}
+.v .heure{font-size:clamp(58px, 8svh, 96px);margin-top:calc(var(--t,0px) * 0);margin-top:clamp(-30px,-2svh,-8px)}
+.v .phrase{font-size:clamp(21px, 2.6svh, 26px);--mot:clamp(42px, 5.4svh, 60px);max-width:24em;margin-top:clamp(14px,2.4svh,28px)}
+.v .signature{margin-top:clamp(22px,4svh,44px)}
+.v .liens{justify-content:center;margin-top:clamp(14px,2.5svh,26px)}
+
+/* 2 · Horizontale (ordinateur) : la sphère d'un côté, l'heure et la phrase de l'autre */
+.h{flex:1;display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;column-gap:clamp(8px,2vw,40px);
+  max-width:1280px;width:100%;margin:0 auto;padding:0 clamp(20px,5vw,72px) 30px}
+.h .sphere{--t:min(700px, 74svh, 50vw)}
+.h .texte{padding-bottom:2svh}
+.h .heure{font-size:clamp(84px, 9.5vw, 156px);margin-left:-.04em}
+.h .phrase{font-size:clamp(22px, 1.75vw, 28px);--mot:clamp(50px, 4.4vw, 72px);max-width:20em;margin-top:clamp(18px,3svh,34px)}
+.h .signature{margin-top:clamp(30px,6svh,64px)}
+.h .liens{margin-top:16px}
+/* sur un écran étroit, la composition horizontale redevient verticale */
+@media (max-width:860px), (max-aspect-ratio:1/1){
+  .h{display:flex;flex-direction:column;align-items:center;text-align:center;padding:8px 20px 34px}
+  .h .sphere{--t:min(520px, 50svh, 88vw)}
+  .h .heure{font-size:clamp(58px, 8svh, 96px);margin:clamp(-30px,-2svh,-8px) 0 0}
+  .h .phrase{font-size:clamp(21px, 2.6svh, 26px);--mot:clamp(42px, 5.4svh, 60px);margin-left:auto;margin-right:auto;max-width:22em}
+  .h .liens{justify-content:center}
+}
+/* téléphone : la sphère, l'heure et la phrase dans le premier écran */
+@media (max-width:520px){
+  .v .sphere,.h .sphere{--t:min(88vw, 38svh, 360px)}
+  .v .heure,.h .heure{font-size:clamp(54px,15vw,64px)}
+  .v .phrase,.h .phrase{font-size:21px;--mot:clamp(40px,11vw,46px);margin-top:12px}
+  .v .signature,.h .signature{margin-top:24px}
+  .liens{flex-direction:column;align-items:center;gap:0}
+}
+
+/* Cadre téléphone (vu depuis un ordinateur) */
+.banc{display:flex;flex-wrap:wrap;gap:36px;justify-content:center;align-items:flex-start;padding:30px 16px 60px}
+.tel{width:390px;height:844px;border-radius:44px;border:10px solid #1b1b1b;overflow:hidden;background:var(--ivoire);flex:none;box-shadow:0 30px 60px -30px rgba(0,0,0,.4)}
+.tel iframe{width:370px;height:824px;border:0;display:block}
+.legende{font:16px/1.45 var(--sans);color:#4a423a;max-width:390px;margin-top:10px}
+
+/* Cartes partagées 1080 × 1350 */
+.carte-cadre{width:min(520px,92vw);aspect-ratio:4/5;overflow:hidden;position:relative;box-shadow:0 30px 60px -34px rgba(0,0,0,.35)}
+.carte{position:absolute;left:0;top:0;width:1080px;height:1350px;transform-origin:0 0;background:var(--ivoire);color:var(--encre)}
+.carte .sphere{position:absolute}
+.carte .heure,.carte .phrase,.carte .signature,.carte .pied{position:absolute}
+.c1 .sphere{--t:820px;left:130px;top:10px}
+.c1 .heure{left:0;right:0;top:760px;text-align:center;font-size:150px}
+.c1 .phrase{left:50px;right:50px;top:935px;text-align:center;font-size:49px;line-height:1.22}
+.c1 .signature{left:0;right:0;top:1218px;text-align:center;font-size:32px}
+.c1 .pied{left:0;right:0;top:1262px;text-align:center;font-size:26px;color:var(--gris)}
+.c2 .sphere{--t:820px;left:230px;top:-30px}
+.c2 .heure{left:96px;top:760px;font-size:210px}
+.c2 .phrase{left:100px;width:920px;top:1000px;font-size:50px;line-height:1.2}
+.c2 .signature{left:100px;top:1238px;font-size:32px}
+.c2 .pied{right:96px;top:1240px;font-size:26px;color:var(--gris)}
+
+dialog{margin:auto;border:0;border-radius:14px;padding:26px 22px 22px;width:min(540px,calc(100vw - 20px));background:#fff;color:var(--encre)}
+dialog::backdrop{background:rgba(20,16,12,.55)}
+dialog h2{font-weight:400;font-size:28px;margin:0 80px 12px 0}
+dialog p,dialog li{font-size:19px;line-height:1.45}
+dialog ol{padding-left:1.3em;margin:8px 0 12px}
+dialog .fermer{position:absolute;top:12px;right:12px;min-height:44px;padding:0 14px;border:1.5px solid var(--trait);border-radius:999px;font-size:17px}
+@media (prefers-reduced-motion:reduce){.phrase,.entree{transition:none}}
+/*ACTIONS_CSS*/
+</style>
+</head>
+<body>
+<div class="proto" role="navigation" aria-label="Commandes du prototype">
+  <strong>Prototype · sphère B</strong>
+  <div class="grp"><span class="lab">Écran ouvert</span>
+    <button type="button" data-vue="vertical">1 · Verticale</button>
+    <button type="button" data-vue="horizontal">2 · Horizontale</button></div>
+  <div class="grp"><span class="lab">Voir aussi</span>
+    <button type="button" data-vue="site">Site et pastille</button>
+    <button type="button" data-vue="telephone">Téléphone</button>
+    <button type="button" data-partage-demo>Partage et carte ↗</button></div>
+  <div class="grp"><span class="lab">Réglages</span>
+    <button type="button" id="r-vitesse" aria-pressed="false">Plus lent</button>
+    <button type="button" id="r-pause" aria-pressed="false">Pause</button>
+    <label class="grp"><span class="lab">Relecture</span><button type="button" id="r-prec" aria-label="Créneau précédent">‹</button><select id="r-minute" aria-label="Créneau à relire"></select><button type="button" id="r-suiv" aria-label="Créneau suivant">›</button></label>
+    <button type="button" id="r-heure" aria-pressed="false">Heure réelle</button></div>
+</div>
+<main id="vue"></main>
+
+<dialog id="d-propos" aria-labelledby="t-propos"><button class="fermer" type="button" data-fermer>Fermer</button>
+  <h2 id="t-propos">À propos</h2><p>{{PROPOS}}</p></dialog>
+<dialog id="d-sources" aria-labelledby="t-sources"><button class="fermer" type="button" data-fermer>Fermer</button>
+  <h2 id="t-sources">Sources</h2><div data-liste-sources></div></dialog>
+
+<script type="application/json" id="corpus">/*CORPUS*/</script>
+<script>
+// Démonstration : l'adresse définitive n'est pas encore en ligne. Le lien affiché est celui de la version définitive ;
+// « Ouvrir la page reçue » montre la page que recevra le destinataire, avec la minute exacte et sa version.
+window.CHRONO_ACTIONS={base:'https://chronographe.editionsla.com', promesse:'Des mots à découvrir. Des instants à lire.', invitation:'Toutes les dix minutes, une nouvelle rencontre.',
+  adresse:'editionsla.com/le-chronographe-la', sphere:'/*SPHERE_DATA*/', essai:'Démonstration : ce lien ne fonctionnera qu’une fois la version d’essai en ligne (avec votre accord) ; en attendant, ouvrez la page reçue ci-dessous.',
+  recu:function(s){ return (location.pathname.indexOf('/partage/')>=0 ? '' : '../partage/') + 'index.html#recu@' + s; }};
+</script>
+<script>/*MOTEUR*/</script>
+<script>/*CARTE*/</script>
+<script>/*ACTIONS*/</script>
+<script>
+(function(){
+'use strict';
+var C=window.ChronoLA; C.charger(JSON.parse(document.getElementById('corpus').textContent));
+var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+var reglages={lent:false,pause:false,reelle:false};
+var reduit=matchMedia('(prefers-reduced-motion: reduce)').matches; if(reduit) reglages.pause=true;
+var dansCadre = /cadre/.test(location.hash);   // vue téléphone : page chargée dans un cadre de 390 px
+var minuteDemo=(function(){ try{ return localStorage.getItem('chrono-la-minute')||'03:17'; }catch(e){ return '03:17'; } })();
+C.modeDemo(minuteDemo);
+function src(petit){ return 'media/b'+(reglages.lent?'-lent':'')+'-'+(petit?'208':'624')+'.mp4'; }
+
+/* ---------- vidéos : ne jouent que visibles, page au premier plan, sans pause ni mouvement réduit ---------- */
+var visibles=new Set();
+var io=new IntersectionObserver(function(en){ en.forEach(function(x){ x.isIntersecting?visibles.add(x.target):visibles.delete(x.target); jouer(x.target); }); },{threshold:0.05});
+function jouer(v){ var ok=!reglages.pause&&document.visibilityState==='visible'&&visibles.has(v); if(ok){ var p=v.play(); if(p&&p.catch)p.catch(function(){}); } else v.pause(); }
+document.addEventListener('visibilitychange',function(){ $$('video').forEach(jouer); });
+function video(petit,fixe){
+  var v=document.createElement('video'); v.muted=true; v.setAttribute('muted',''); v.playsInline=true; v.setAttribute('playsinline','');
+  v.loop=true; v.preload=petit?'auto':'metadata'; v.poster='media/b-fixe'+(petit?'-208':'')+'.jpg'; v.setAttribute('aria-hidden','true'); v.tabIndex=-1;
+  v.src=src(petit); v.dataset.petit=petit?'1':''; return v;
+}
+
+/* ---------- la pastille B, inchangée ---------- */
+function pastilleObjet(t){
+  var el=document.createElement('div'); el.className='lum'; el.dataset.p='b'; el.style.setProperty('--t',t);
+  el.innerHTML='<div class="lum-halo" style="background-image:url(media/b-fixe-208.jpg)"></div><div class="lum-corps"><div class="lum-voile"></div><div class="lum-reflet"></div></div><div class="lum-ombre"></div>';
+  el.querySelector('.lum-corps').prepend(video(true)); return el;
+}
+
+/* ---------- textes ---------- */
+function phraseHTML(e){ return C.noticeHTML(e); }
+document.addEventListener('click',function(ev){ if(!ev.target.closest('[data-sources]')) return;
+  $('[data-liste-sources]').innerHTML=C.sourcesHTML(C.etat().entree); $('#d-sources').showModal(); });
+var abonnes=[]; C.abonner(function(e){ abonnes.forEach(function(f){ f(e); }); });
+function lier(r){
+  var prem=true;
+  var f=function(e){
+    $$('[data-heure]',r).forEach(function(t){ t.textContent=e.heure; t.setAttribute('datetime',e.heure); });
+    $$('[data-phrase]',r).forEach(function(p){ var h=phraseHTML(e); if(p.innerHTML===h) return;
+      if(prem||reduit){ p.innerHTML=h; return; } p.style.opacity=0; setTimeout(function(){ p.innerHTML=h; p.style.opacity=''; },450); });
+    $$('[data-repere]',r).forEach(function(s){ s.textContent = e.mode==='demo' ? 'Heure d’exemple : '+e.heure : ''; });
+    $$('.pastille',r).forEach(function(a){ a.setAttribute('aria-label','Le Chronographe LÀ, '+e.heure+' : ouvrir'); var t=a.querySelector('.etiquette'); if(t) t.textContent='Le Chronographe LÀ · '+e.heure; });
+    prem=false;
+  };
+  abonnes.push(f); f(C.etat());
+}
+
+/* ---------- l'écran ouvert ---------- */
+function ouvert(compo){
+  var s=document.createElement('section'); s.className='ouvert'; s.setAttribute('aria-label','Le Chronographe LÀ');
+  var texte='<time class="heure entree" data-heure></time><div class="phrase entree" data-phrase></div>'+
+    '<p class="signature entree">Le Chronographe LÀ</p>'+
+    '<div class="liens entree"><button type="button" data-partager>Partager cet instant</button><button type="button" data-ajouter>Ajouter à mon écran d’accueil</button></div>'+
+    '<p class="repere entree" data-repere></p>';
+  s.innerHTML='<div class="barre entree"><a href="#site">← Éditions LÀ</a><button type="button" data-propos>À propos</button></div>'+
+    (compo==='horizontal' ? '<div class="h"><div class="place"></div><div class="texte">'+texte+'</div></div>' : '<div class="v"><div class="place"></div>'+texte+'</div>');
+  var sp=document.createElement('div'); sp.className='sphere'; sp.appendChild(video(false)); $('.place',s).replaceWith(sp);
+  // la minute affichée est figée au clic (heure exacte, identifiant, version), puis lien, carte et envoi
+  $('[data-partager]',s).onclick=function(){ ChronoActions.partager(C.figer()); };
+  $('[data-ajouter]',s).onclick=function(){ ChronoActions.ajouter(); };
+  $('[data-propos]',s).onclick=function(){ $('#d-propos').showModal(); };
+  return s;
+}
+
+/* ---------- le site (réplique sobre), la pastille en bas à droite ---------- */
+var RECIT=['Liz avait ajouté le Chronographe à son téléphone, entre la météo et les billets de train. Elle l’ouvrait quelquefois. Une phrase apparaissait sous l’heure, différente à chaque minute. Certains jours, elle n’y pensait pas.',
+ 'Cette nuit-là, elle se réveilla sans savoir pourquoi.','Trois heures dix-sept.',
+ 'Elle fit le calcul habituel : ce qui lui restait de sommeil, ce qu’il faudrait faire au matin. Elle allait reposer le téléphone, puis ouvrit le Chronographe.',
+ 'À côté d’elle, Alon dormait. Il avait ramené le drap jusqu’à son épaule ; une main dépassait, dont les doigts remuaient légèrement. Liz baissa la luminosité de l’écran.',
+ 'Au-dehors, un moteur démarra. Elle l’entendit s’éloigner, s’arrêter au carrefour, repartir. Puis le silence revint, traversé par la respiration d’Alon.'];
+function site(){
+  var s=document.createElement('div'); s.className='site';
+  var mobile=matchMedia('(max-width:767px)').matches, t=mobile?'64px':'80px';
+  s.innerHTML='<header class="site-tete"><a class="logo" href="#site" aria-label="Éditions LÀ, accueil">LÀ</a>'+
+   '<nav class="site-nav" aria-label="Menu du site (réplique)"><a href="#site">Accueil</a><a href="#site">La maison</a><a class="actif" href="#site">La Revue</a><a href="#site">Une phrase LÀ</a><a href="#site">Le livre</a><a href="#site">Les Cartes LÀ</a><a href="#site">Boutique</a></nav>'+
+   '<span class="burger" aria-hidden="true"><span></span><span></span></span><span class="panier">Panier 0</span></header>'+
+   '<article class="article"><p class="rub">La Revue LÀ · L’Humain</p><h1>03 h 17</h1><p class="sous">Liz &amp; Alon · réplique de page, pour la maquette</p>'+
+   RECIT.map(function(x,i){ return '<p class="t'+(i===1||i===2?' c':'')+'">'+x+'</p>'; }).join('')+'</article>'+
+   '<footer class="site-pied">Éditions LÀ · Contact · Mentions légales · Politique de confidentialité</footer>'+
+   '<button class="haut" type="button" aria-label="Revenir en haut de la page">↑</button>'+(mobile?'<span class="cookies" aria-hidden="true">Modifier mes préférences de cookies</span>':'');
+  var a=document.createElement('a'); a.className='pastille'; a.href='#'+compoOuverte();
+  a.appendChild(pastilleObjet(t)); var et=document.createElement('span'); et.className='etiquette'; et.setAttribute('aria-hidden','true'); a.appendChild(et);
+  s.appendChild(a);
+  requestAnimationFrame(function(){ var c=s.querySelector('.cookies'); if(!c) return; var cr=c.getBoundingClientRect(), r=a.getBoundingClientRect();
+    if(cr.right>r.left&&cr.left<r.right&&cr.bottom>r.top) a.style.setProperty('--decal',(r.bottom-cr.top+10)+'px'); });
+  a.addEventListener('click',function(ev){ ev.preventDefault(); agrandir(a); });
+  return s;
+}
+function compoOuverte(){ var c; try{ c=localStorage.getItem('chrono-la-compo'); }catch(e){} return c==='vertical'?'vertical':'horizontal'; }
+
+/* ---------- la pastille s'agrandit et devient l'œuvre ouverte ---------- */
+function agrandir(a){
+  var compo=compoOuverte();
+  var pv=a.querySelector('video'), temps=pv?pv.currentTime:0;
+  if(reduit||!a.animate){ suite=temps; location.hash=compo; return; }
+  var dep=a.querySelector('.lum-corps').getBoundingClientRect();
+  // on prépare l'écran d'arrivée, invisible, pour connaître la place exacte de la sphère
+  var main=$('#vue'), arr=ouvert(compo); arr.classList.add('arrivee'); arr.style.cssText='position:fixed;inset:0;top:'+main.getBoundingClientRect().top+'px;z-index:30;visibility:hidden';
+  document.body.appendChild(arr);
+  var sp=arr.querySelector('.sphere'), r=sp.getBoundingClientRect(), bulle=r.width*.79;
+  var cx=r.left+r.width/2, cy=r.top+r.height*.47;
+  // clone de la pastille, sans ses effets de surface, qui grandit jusqu'à la taille de la bulle
+  var c=a.querySelector('.lum').cloneNode(true); var cv=c.querySelector('video'); cv.currentTime=temps; cv.muted=true; cv.play&&cv.play().catch(function(){});
+  c.style.cssText='position:fixed;z-index:60;left:'+dep.left+'px;top:'+dep.top+'px;--t:'+dep.width+'px;margin:0;pointer-events:none';
+  document.body.appendChild(c); a.style.visibility='hidden';
+  var k=bulle/dep.width, tx=(cx-bulle/2)-dep.left, ty=(cy-bulle/2)-dep.top;
+  $$('.lum-halo,.lum-ombre,.lum-reflet,.lum-voile',c).forEach(function(x){ x.animate([{opacity:1},{opacity:0}],{duration:520,fill:'forwards',easing:'ease-out'}); });
+  var fond=document.createElement('div'); fond.style.cssText='position:fixed;inset:0;z-index:55;background:var(--ivoire);opacity:0;pointer-events:none'; document.body.appendChild(fond);
+  fond.animate([{opacity:0},{opacity:1}],{duration:560,fill:'forwards',easing:'ease-in-out'});
+  c.style.transformOrigin='0 0';
+  c.animate([{transform:'translate(0,0) scale(1)'},{transform:'translate('+tx+'px,'+ty+'px) scale('+k+')'}],{duration:760,easing:'cubic-bezier(.33,0,.15,1)',fill:'forwards'})
+   .onfinish=function(){
+     var v=sp.querySelector('video'); try{ v.currentTime=cv.currentTime; }catch(e){}
+     arr.style.visibility='visible'; arr.style.zIndex='58';
+     c.animate([{opacity:1},{opacity:0}],{duration:260,fill:'forwards'}).onfinish=function(){ c.remove(); };
+     visibles.add(v); jouer(v); lier(arr);
+     requestAnimationFrame(function(){ arr.classList.remove('arrivee'); });
+     setTimeout(function(){ arr.remove(); fond.remove(); suite=null; garder=true; location.hash=compo; },900);
+   };
+}
+var suite=null, garder=false;
+
+/* ---------- vue téléphone (depuis un ordinateur) : la vraie page dans un cadre de 390 px ---------- */
+function telephone(){
+  var b=document.createElement('div'); b.className='banc';
+  ['vertical','site'].forEach(function(v){
+    var col=document.createElement('div'); var t=document.createElement('div'); t.className='tel';
+    var f=document.createElement('iframe'); f.title='Aperçu téléphone : '+v; f.src=location.pathname+'#'+v+'-cadre'; t.appendChild(f); col.appendChild(t);
+    var l=document.createElement('p'); l.className='legende'; l.textContent= v==='site' ? 'Le site à 390 px : la pastille en bas à gauche, au-dessus des cookies. Touchez-la pour ouvrir.' : 'L’écran ouvert à 390 px : la sphère, l’heure et le contenu des dix minutes en cours.';
+    col.appendChild(l); b.appendChild(col); });
+  return b;
+}
+
+/* ---------- routage ---------- */
+function rendre(){
+  var h=(location.hash||'#horizontal').slice(1).replace('-cadre','');
+  if(['vertical','horizontal','site','telephone'].indexOf(h)<0) h='horizontal';
+  if(h==='vertical'||h==='horizontal'){ try{ localStorage.setItem('chrono-la-compo',h); }catch(e){} }
+  abonnes.length=0; visibles.clear(); $$('#vue video').forEach(function(v){ io.unobserve(v); v.pause(); v.removeAttribute('src'); v.load(); });
+  var main=$('#vue'); main.innerHTML='';
+  var n = h==='site'?site(): h==='telephone'?telephone(): ouvert(h);
+  main.appendChild(n); lier(main); $$('video',main).forEach(function(v){ io.observe(v); });
+  $$('.proto [data-vue]').forEach(function(b){ b.setAttribute('aria-pressed',String(b.dataset.vue===h)); });
+  if(dansCadre) $('.proto').hidden=true;
+  if(!garder) window.scrollTo(0,0); garder=false;
+}
+$$('.proto [data-vue]').forEach(function(b){ b.onclick=function(){ location.hash=b.dataset.vue; }; });
+function bascule(id,cle,apres){ var b=$(id); b.setAttribute('aria-pressed',String(reglages[cle])); b.onclick=function(){ reglages[cle]=!reglages[cle]; b.setAttribute('aria-pressed',String(reglages[cle])); apres(); }; }
+bascule('#r-vitesse','lent',function(){ $$('video').forEach(function(v){ v.src=src(!!v.dataset.petit); jouer(v); }); });
+bascule('#r-pause','pause',function(){ $$('video').forEach(jouer); });
+bascule('#r-heure','reelle',function(){ if(reglages.reelle) C.modeDirect(); else C.modeDemo(minuteDemo); });
+// Outil de relecture (prototype seulement) : parcourir les 144 créneaux du corpus.
+(function(){ var c=JSON.parse(document.getElementById('corpus').textContent), s=$('#r-minute'), h, m;
+  for(h=0;h<24;h++) for(m=0;m<60;m+=10){ var k=(h<10?'0':'')+h+':'+(m?m:'00'), e=c.creneaux[k], o=document.createElement('option');
+    o.value = k==='03:10' ? '03:17' : k;   // le créneau de la phrase témoin s'ouvre à 03:17
+    o.textContent=o.value+' · '+(e ? (e.type==='mot' ? e.mot : '« '+e.lignes.join(' ').slice(0,38)+'… »') : 'à venir'); s.appendChild(o); }
+  s.value=minuteDemo; if(s.selectedIndex<0) s.value=C.creneau(minuteDemo);   // une minute précise reste affichée, son créneau est sélectionné
+  if(s.selectedIndex<0){ s.value='03:17'; minuteDemo='03:17'; C.modeDemo(minuteDemo); }
+  function aller(d){ var i=s.selectedIndex+d; if(i<0) i=s.options.length-1; if(i>=s.options.length) i=0; s.selectedIndex=i; s.onchange(); }
+  $('#r-prec').onclick=function(){ aller(-1); }; $('#r-suiv').onclick=function(){ aller(1); };
+})();
+$('#r-minute').onchange=function(){ minuteDemo=this.value; try{ localStorage.setItem('chrono-la-minute',minuteDemo); }catch(e){}
+  reglages.reelle=false; $('#r-heure').setAttribute('aria-pressed','false'); C.modeDemo(minuteDemo);
+  $$('iframe').forEach(function(f){ try{ f.contentWindow.location.reload(); }catch(e){} }); };
+$('[data-partage-demo]').onclick=function(){ window.open('../partage/index.html#carte','_blank'); };   // vue d'ensemble : carte, aperçu, page reçue
+$$('[data-fermer]').forEach(function(b){ b.onclick=function(){ b.closest('dialog').close(); }; });
+addEventListener('hashchange',rendre);
+C.demarrer(); rendre();
+})();
+</script>
+</body>
+</html>
