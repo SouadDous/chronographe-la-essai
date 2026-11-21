@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Le Chronographe LÀ — Éditions LÀ</title>
+<meta name="description" content="Un instant partagé. Le Chronographe LÀ : des mots à découvrir, des instants à lire. Toutes les dix minutes, une nouvelle rencontre.">
+<link rel="canonical" href="https://chronographe.editionsla.com/">
+<link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials">
+<meta name="theme-color" content="#F6F3ED">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Chronographe LÀ">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="/icones/apple-touch-icon.png">
+<link rel="icon" href="/icones/icone-192.png" sizes="192x192">
+<link rel="preload" href="/commun/polices/ebg-roman.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/commun/commun.css">
+<link rel="stylesheet" href="/commun/objet.css">
+</head>
+<body>
+<section class="ouvert" aria-label="Le Chronographe LÀ">
+  <div class="barre"><a href="https://editionsla.com">← Éditions LÀ</a><button type="button" data-propos>À propos</button></div>
+  <div class="h">
+    <div class="sphere" data-sphere><img src="/commun/media/b-fixe.jpg" alt=""></div>
+    <div class="texte">
+      <time class="heure" data-heure></time>
+      <div class="phrase" data-phrase aria-live="polite"></div>
+      <p class="signature">Le Chronographe LÀ</p>
+      <div class="liens"><button type="button" data-partager>Partager cet instant</button><button type="button" data-story>Partager en story</button><button type="button" data-ajouter>Ajouter à mon écran d’accueil</button></div>
+    </div>
+  </div>
+</section>
+<dialog id="d-propos" aria-labelledby="t-propos"><button class="fermer" type="button" data-fermer>Fermer</button>
+  <h2 id="t-propos">Le Chronographe LÀ</h2><p>Une création des Éditions LÀ. Des mots à découvrir, des instants à lire : toutes les dix minutes, un mot et sa définition, ou un fragment littéraire, avec l’heure de votre appareil. Les contenus sont préparés et sélectionnés avant publication. L’heure détermine celui que vous découvrez. Gratuit, sans compte.</p></dialog>
+<dialog id="d-sources" aria-labelledby="t-sources"><button class="fermer" type="button" data-fermer>Fermer</button>
+  <h2 id="t-sources">Sources</h2><div data-liste-sources></div></dialog>
+<script>window.CHRONO_ACTIONS={"promesse": "Des mots à découvrir. Des instants à lire.", "invitation": "Toutes les dix minutes, une nouvelle rencontre.", "adresse": "editionsla.com/le-chronographe-la", "sphere": "/commun/media/b-fixe.jpg"};</script>
+<script src="/commun/moteur.js"></script>
+<script src="/commun/carte.js"></script>
+<script src="/commun/actions.js"></script>
+<script src="/commun/objet.js"></script>
+<script src="/essai-story-fff51d64/story.js"></script>
+<script>document.querySelector('[data-story]').onclick=function(){var e=window.ChronoLA&&ChronoLA.figer();if(e&&e.entree&&window.ChronoStory)ChronoStory.ouvrir(e.entree,{fond:'/essai-story-fff51d64/halo-story.jpg'});};</script>
+</body>
+</html>
