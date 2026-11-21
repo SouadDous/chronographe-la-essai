@@ -27,7 +27,7 @@
       <time class="heure" data-heure></time>
       <div class="phrase" data-phrase aria-live="polite"></div>
       <p class="signature">Le Chronographe LÀ</p>
-      <div class="liens"><button type="button" data-partager>Partager cet instant</button><button type="button" data-ajouter>Ajouter à mon écran d’accueil</button></div>
+      <div class="liens"><button type="button" data-partager>Partager cet instant</button><button type="button" data-story>Partager en story</button><button type="button" data-ajouter>Ajouter à mon écran d’accueil</button></div>
     </div>
   </div>
 </section>
@@ -40,5 +40,7 @@
 <script src="/commun/carte.js"></script>
 <script src="/commun/actions.js"></script>
 <script src="/commun/objet.js"></script>
+<script src="/commun/story.js"></script>
+<script>document.querySelector('[data-story]').onclick=function(){var e=window.ChronoLA&&ChronoLA.figer();if(e&&e.entree&&window.ChronoStory)ChronoStory.ouvrir(e.entree);};</script>
 </body>
 </html>
