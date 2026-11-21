@@ -133,3 +133,7 @@ dialog.action .apercu figcaption{margin-top:6px}
 
 /* bandeau des versions d’essai (absent de la construction définitive) */
 .essai{font:15px/1.4 var(--sans);color:#5b5248;text-align:center;padding:8px 12px;border-bottom:1px solid var(--trait);background:#FAF8F5;margin:0}
+
+/* Édition 02 : libellé de la rencontre (LE MOT · LE FRAGMENT · L’EXTRAIT) et signature des extraits */
+.contenu .etiquette{font-size:.72em;letter-spacing:.16em;text-transform:uppercase;color:#6f6a64;margin:0 0 .9em;font-style:normal}
+.contenu.extrait .signature{font-style:italic;color:#6f6a64;margin-top:.9em}

@@ -25,7 +25,7 @@ function remplir(e){
 document.addEventListener('click',function(ev){ if(!ev.target.closest('[data-sources]')) return;
   var d=$('#d-sources'); d.querySelector('[data-liste-sources]').innerHTML=C.sourcesHTML(C.etat().entree); d.showModal(); });
 
-fetch('/corpus/actuel.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(c){ C.charger(c); })
+fetch('/corpus/edition-02.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(c){ C.charger(c); })
   .catch(function(){}).then(function(){ C.abonner(remplir); C.demarrer(); document.body.dataset.pret='1'; });
 
 $('[data-partager]').onclick=function(){ A.partager(C.figer()); };   // figée au clic : heure, identifiant, version

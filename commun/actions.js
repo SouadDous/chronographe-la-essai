@@ -90,10 +90,14 @@
   }
   function lien(e) {
     var base = CFG.base != null ? CFG.base : (location.protocol.indexOf('http') === 0 ? location.origin : '');
+    // Édition 02 : on partage la rencontre, pas l'heure — une page stable par rencontre (/r/<identifiant>/).
+    if (rencontre(e)) return base + '/r/' + e.entree.id + '/';
     return base + '/m/' + slug(e);
   }
+  function rencontre(e) { return !!(e && e.entree && /^la0\d-/.test(e.entree.id)); }   // édition 02
   function resume(e) {
     var n = e.entree; if (!n) return e.heure;
+    if (rencontre(e)) return (n.type === 'mot' ? n.mot.replace(/­/g, '') : '«\u00a0' + n.lignes.join(' ').replace(/ ([»:;!?])/g, '\u00a0$1').replace(/« /g, '«\u00a0') + '\u00a0»' + (n.extrait && n.signature ? ' — ' + n.signature : ''));
     // texte intégral, jamais tronqué (un fragment fait au plus 170 signes)
     return e.heure + ' · ' + (n.type === 'mot' ? n.mot.replace(/­/g, '') : '«\u00a0' + n.lignes.join(' ').replace(/ ([»:;!?])/g, '\u00a0$1').replace(/« /g, '«\u00a0') + '\u00a0»');   // espaces insécables : affichage seulement
   }
@@ -101,6 +105,7 @@
   function partager(etat) {
     // la minute est figée ici, au clic : rien de ce qui suit ne relit l'horloge
     var f = JSON.parse(JSON.stringify({ heure: etat.heure, entree: etat.entree }));
+    if (rencontre(f)) f.heure = '';   // l'heure reste celle de l'horloge, elle ne voyage pas avec la rencontre
     var url = lien(f), d = fenetre('d-partage', 'Partager cet instant'), c = d.querySelector('.corps');
     var peutEnvoyer = !!navigator.share;
     c.innerHTML = '<p class="fige" data-fige>' + esc(resume(f)) + '</p>' +
@@ -113,7 +118,7 @@
       (CFG.essai ? '<p class="note essai-note">' + CFG.essai + '</p>' : '') +
       (CFG.recu ? '<p class="note"><a href="' + esc(CFG.recu(slug(f))) + '" target="_blank" rel="noopener">Ouvrir la page reçue (démonstration)</a></p>' : '');
     var statut = c.querySelector('[data-statut]'); var dire = function (t) { statut.textContent = t; };
-    var titre = 'Le Chronographe LÀ — ' + f.heure, texte = 'Un instant partagé : ' + resume(f);
+    var titre = 'Le Chronographe LÀ' + (f.heure ? ' — ' + f.heure : ''), texte = 'Un instant partagé : ' + resume(f);
     if (peutEnvoyer) c.querySelector('[data-envoyer]').onclick = function () {
       navigator.share({ title: titre, text: texte, url: url }).then(function () { dire('Lien envoyé.'); }).catch(function (x) { if (x && x.name !== 'AbortError') dire('L’envoi n’a pas abouti : copiez le lien.'); });
     };
@@ -124,7 +129,7 @@
       else { champ.select(); doc.execCommand('copy'); fin(); }
     };
     // la carte de la minute figée
-    var nom = 'chronographe-la-' + f.heure.replace(':', 'h') + '.png', fichier = null;
+    var nom = 'chronographe-la-' + (f.heure ? f.heure.replace(':', 'h') : f.entree.id) + '.png', fichier = null;
     courant = global.ChronoCarte.dessiner({ heure: f.heure, contenu: f.entree, promesse: CFG.promesse, invitation: CFG.invitation, adresse: CFG.adresse }, { sphere: CFG.sphere })
       .then(function (x) { return global.ChronoCarte.blob(x.canvas).then(function (b) {
         fichier = new File([b], nom, { type: 'image/png' });

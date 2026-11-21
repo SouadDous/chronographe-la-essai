@@ -1,3 +1,56 @@
+/* Éditions LÀ — rotation éditoriale proposée, non déployée.
+ * Déterministe, sans tirage aléatoire et sans fuseau imposé.
+ * Les dates sont celles du terminal de consultation.
+ */
+(function (root, factory) {
+  var api = factory();
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  else root.ChronoLARotation = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  'use strict';
+  var LABELS = Object.freeze({ mot: 'LE MOT', fragment: 'LE FRAGMENT', extrait: 'L’EXTRAIT' });
+  var pad = function (n) { return String(n).padStart(2, '0'); };
+
+  function resolve(date, edition) {
+    if (!(date instanceof Date) || Number.isNaN(date.getTime())) throw new TypeError('Date locale invalide');
+    if (!edition || !Array.isArray(edition.pools) || edition.pools.length !== 12) throw new TypeError('Corpus incomplet');
+    var minute = date.getHours() * 60 + date.getMinutes();
+    var period = Math.floor(minute / 120);
+    var withinPeriod = Math.floor((minute % 120) / 10);
+    var dayOfMonth = date.getDate();
+    // Days 29-31 borrow from the neighboring pool, avoiding same-time repeats.
+    var bonus = dayOfMonth > 28;
+    var selectedPeriod = bonus ? (period + 1) % 12 : period;
+    var dayOffset = bonus ? dayOfMonth - 29 : dayOfMonth - 1;
+    var position = (withinPeriod + dayOffset) % 28;
+    var pool = edition.pools[selectedPeriod];
+    if (!pool || !Array.isArray(pool.entries) || pool.entries.length !== 28) throw new TypeError('Tranche horaire incomplète');
+    var entry = pool.entries[position];
+    if (!entry) throw new TypeError('Rencontre manquante');
+    return {
+      hour: pad(date.getHours()) + ':' + pad(date.getMinutes()),
+      slotStart: pad(Math.floor(minute / 60)) + ':' + pad(Math.floor((minute % 60) / 10) * 10),
+      dateLocal: date.getFullYear() + '-' + pad(date.getMonth() + 1) + '-' + pad(dayOfMonth),
+      editionId: edition.edition_id,
+      period: period,
+      selectedPool: pool.id,
+      poolPosition: position,
+      bonusDay: bonus,
+      type: entry.type,
+      label: LABELS[entry.type],
+      text: entry.text,
+      term: entry.type === 'mot' ? entry.term : null,
+      grammarAndDomain: entry.type === 'mot' ? entry.grammar_and_domain : null,
+      credit: entry.type === 'extrait' ? entry.author_credit : null,
+      sourceTitle: entry.type === 'extrait' ? entry.source_title : null,
+      id: entry.id,
+      version: entry.version,
+      entry: entry
+    };
+  }
+  return { resolve: resolve, labels: LABELS };
+});
+
 /* ==========================================================================
    Le Chronographe LÀ — moteur commun (nouvelle édition, projet autonome)
    © 2026 Éditions LÀ
@@ -48,6 +101,30 @@
     return c;
   }
 
+  /* ---- Édition 02 : la rencontre est choisie par rotation_28_jours.js (moteur de la Maison, non modifié).
+     On ne fait ici que traduire l'entrée choisie vers la notice d'affichage, sans toucher au texte. ---- */
+  var LIBELLES = { mot: 'LE MOT', fragment: 'LE FRAGMENT', extrait: 'L’EXTRAIT' };
+  function depuisE02(x) {
+    if (!x) return null;
+    var c = { id: x.id, version: x.version, etiquette: LIBELLES[x.type] };
+    if (x.type === 'mot') {
+      c.type = 'mot'; c.mot = x.term; c.grammaire = x.grammar_and_domain; c.definition = x.text;
+      c.sources = (x.sources || []).filter(function (s) { return s && s.title; }).map(function (s) { return { titre: s.title, url: s.url || null }; });
+    } else {
+      c.type = 'fragment'; c.lignes = [x.text]; c.sources = [];
+      if (x.type === 'extrait') { c.extrait = true; c.signature = x.author_credit; }
+    }
+    return c;
+  }
+  function estE02() { return !!(corpus && corpus.pools && global.ChronoLARotation); }
+  function dateA(heure, d) {   // une date locale à l'heure demandée (aujourd'hui par défaut)
+    var b = d ? new Date(d.getTime()) : new Date(); var hm = heure.split(':');
+    b.setHours(+hm[0], +hm[1], 0, 0); return b;
+  }
+  function rencontreE02(heure, d) {
+    try { return depuisE02(global.ChronoLARotation.resolve(dateA(heure, d), corpus).entry); } catch (err) { return null; }
+  }
+
   /* ---- Rendu commun d'une notice (page, compositions, réception) -------- */
   // Affichage seulement (le corpus n'est pas modifié) : l'espace avant » : ; ! ? et après « devient insécable,
   // pour qu'un signe ne parte jamais seul en début de ligne.
@@ -66,6 +143,8 @@
   function voir(n) { return n.sources && n.sources.length ? '<p class="voir"><button type="button" class="sources" data-sources>Sources</button></p>' : ''; }
   function attributionTexte(a) { return a ? [a.auteur, a.oeuvre].filter(Boolean) : []; }
   // Deux compositions dans la même identité : rien d'autre que la typographie ne distingue les catégories.
+  function etiquetteHTML(n) { return n && n.etiquette ? '<p class="etiquette">' + esc(n.etiquette) + '</p>' : ''; }
+  function signatureHTML(n) { return n && n.extrait && n.signature ? '<p class="attribution signature">' + esc(n.signature) + '</p>' : ''; }
   function contenuHTML(e) {
     var n = e.entree;
     if (!n) return '<div class="contenu vide"><p class="a-ecrire">À venir · ' + creneau(e.heure) + '</p></div>';
@@ -73,11 +152,11 @@
       var a = n.attribution;
       // Les blocs d'affichage viennent de l'indication de présentation quand elle existe ; sinon, le texte tel quel.
       var blocs = n.presentation && n.presentation.paragraphes ? n.presentation.paragraphes : n.lignes;
-      return '<div class="contenu fragment">' + blocs.map(function (l) { return '<p class="texte">' + esc(l) + '</p>'; }).join('') +
+      return '<div class="contenu fragment' + (n.extrait ? ' extrait' : '') + '">' + etiquetteHTML(n) + blocs.map(function (l) { return '<p class="texte">' + esc(l) + '</p>'; }).join('') + signatureHTML(n) +
         (a && (a.auteur || a.oeuvre) ? '<p class="attribution">' + (a.auteur ? esc(a.auteur) : '') + (a.auteur && a.oeuvre ? ', ' : '') + (a.oeuvre ? '<cite>' + esc(a.oeuvre) + '</cite>' : '') + '</p>' : '') +
         credit(n) + voir(n) + '</div>';
     }
-    return '<div class="contenu mot-def"><p class="mot" lang="fr">' + motHTML(n.mot) + '</p>' +
+    return '<div class="contenu mot-def">' + etiquetteHTML(n) + '<p class="mot" lang="fr">' + motHTML(n.mot) + '</p>' +
       '<p class="nature">' + esc(natureTexte(n)) + '</p>' +
       '<p class="definition">' + esc(n.definition) + '</p>' + credit(n) + voir(n) + '</div>';
   }
@@ -90,6 +169,7 @@
   // Texte affiché à une minute donnée : le texte invité actif à cette date, sinon le texte de base.
   // Sans date (minute partagée, démonstration) : le texte de base.
   function entree(heure, d) {
+    if (estE02()) return rencontreE02(heure, d);
     heure = creneau(heure);
     if (d) {
       var inv = corpus.invites && corpus.invites[heure], j = jourLocal(d);
@@ -103,6 +183,11 @@
 
   // Retrouve un texte par son identifiant (base ou invité), pour une minute partagée.
   function parId(heure, id) {
+    if (estE02()) {
+      for (var p = 0; p < corpus.pools.length; p++) for (var k = 0; k < corpus.pools[p].entries.length; k++)
+        if (corpus.pools[p].entries[k].id === id) return depuisE02(corpus.pools[p].entries[k]);
+      return null;
+    }
     heure = creneau(heure);
     var e = corpus.creneaux && corpus.creneaux[heure];
     if (e && e.id === id) return copie(e, false);

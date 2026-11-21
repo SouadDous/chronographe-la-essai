@@ -4,10 +4,10 @@
    Le nom du cache change à chaque construction : ses anciennes copies sont effacées, jamais les caches d'un autre site
    servi depuis la même origine (ex. l'ancien Chronographe sur <compte>.github.io/chronographe). */
 var PREFIXE = 'chronographe-la-nouvelle-edition-';   // n'efface jamais un cache d'un autre site de la même origine
-var CACHE = PREFIXE + '8aa40f7816a7';
+var CACHE = PREFIXE + 'e02-b7d4a2329855';
 var ESSENTIEL = ['/', '/commun/commun.css', '/commun/objet.css', '/commun/moteur.js', '/commun/carte.js', '/commun/actions.js',
   '/commun/objet.js', '/commun/recu.js', '/commun/polices/ebg-roman.woff2', '/commun/polices/ebg-italic.woff2',
-  '/commun/media/b-fixe.jpg', '/corpus/actuel.json', '/manifest.webmanifest'];
+  '/commun/media/b-fixe.jpg', '/corpus/edition-02.json', '/manifest.webmanifest'];
 self.addEventListener('install', function (e) { e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(ESSENTIEL); }).then(function () { return self.skipWaiting(); })); });
 self.addEventListener('activate', function (e) {
   e.waitUntil(caches.keys().then(function (k) { return Promise.all(k.filter(function (n) { return n.indexOf(PREFIXE) === 0 && n !== CACHE; }).map(function (n) { return caches.delete(n); })); }).then(function () { return self.clients.claim(); }));

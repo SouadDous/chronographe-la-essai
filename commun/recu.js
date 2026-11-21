@@ -6,6 +6,8 @@
 'use strict';
 var C=window.ChronoLA, $=function(s){return document.querySelector(s);};
 var envoyee=JSON.parse($('#minute').textContent);          // null sur la page d'accueil
+// Édition 02 : on partage la rencontre, pas l'heure. La page de rencontre n'a pas d'heure (champ vide, masqué).
+if(envoyee && !envoyee.heure) envoyee.heure='';
 // iPhone seulement : ouverte depuis l'icône de l'écran d'accueil (certaines versions d'iOS enregistrent l'adresse
 // de la page en cours plutôt que celle du Chronographe), la page mène à la minute du moment. Sur iPhone, un lien
 // reçu ne s'ouvre jamais dans l'app de l'écran d'accueil ; sur Android, si, d'où la restriction à navigator.standalone.
@@ -23,7 +25,7 @@ if(!reduit){
   document.addEventListener('visibilitychange',function(){ if(document.hidden) v.pause(); else { var q=v.play(); if(q&&q.catch) q.catch(function(){}); } });
 }
 
-function remplir(e){ var h=$('[data-heure]'); h.textContent=e.heure; h.setAttribute('datetime',e.heure); $('[data-phrase]').innerHTML=C.noticeHTML(e); courante=e.entree; ajuster(); }
+function remplir(e){ var h=$('[data-heure]'); h.textContent=e.heure; h.setAttribute('datetime',e.heure); h.hidden=!e.heure; $('[data-phrase]').innerHTML=C.noticeHTML(e); courante=e.entree; ajuster(); }
 
 // Proportions : quand le texte est long, seule la sphère cède de la place (jusqu'à 62 % de sa taille prévue),
 // pour que le bouton reste visible ; les caractères ne changent jamais. Sur un très petit écran, si cela ne
@@ -32,7 +34,8 @@ function ajuster(){
   var s=$('[data-sphere]'), b=$('.recu .agir:not([hidden]) button'); if(!s||!b) return;
   s.style.removeProperty('--t');
   var prevue=parseFloat(getComputedStyle(s).width), exces=b.getBoundingClientRect().bottom+window.scrollY-(innerHeight-12);
-  if(exces>0) s.style.setProperty('--t', Math.max(prevue*0.62, prevue-exces*1.1)+'px');
+  var plancher=document.querySelector('[data-phrase] .etiquette')?0.48:0.62;   // édition 02 : une ligne de libellé en plus
+  if(exces>0) s.style.setProperty('--t', Math.max(prevue*plancher, prevue-exces*1.1)+'px');
 }
 addEventListener('resize',ajuster);
 if(document.fonts&&document.fonts.ready) document.fonts.ready.then(ajuster);
@@ -42,7 +45,7 @@ ajuster();
 document.addEventListener('click',function(ev){ if(!ev.target.closest('[data-sources]')) return;
   $('[data-liste-sources]').innerHTML=C.sourcesHTML(courante); $('#d-sources').showModal(); });
 
-var pret=fetch('/corpus/actuel.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(c){ C.charger(c); })
+var pret=fetch('/corpus/edition-02.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(c){ C.charger(c); })
   .catch(function(){ /* hors ligne : « texte à écrire » plutôt qu'une erreur */ });
 
 function bascule(vers){

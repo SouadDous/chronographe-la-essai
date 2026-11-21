@@ -70,6 +70,10 @@
       corps.push(bloc(ctx, gram, { police: police('italic', 400, 31), taille: 31, hauteurLigne: 1.3, couleur: GRIS, avant: 31 * 0.45 }));
       corps.push(bloc(ctx, c.definition, { police: police('normal', 400, 38), taille: 38, hauteurLigne: 1.32, avant: 38 * 0.55 }));
     }
+    if (c && c.extrait && c.signature) corps.push(bloc(ctx, c.signature, { police: police('italic', 400, 30.4), taille: 30.4, hauteurLigne: 1.3, couleur: GRIS, avant: 38 * 0.85 }));
+    if (c && c.etiquette && corps.length) {   // édition 02 : LE MOT · LE FRAGMENT · L’EXTRAIT, au-dessus du contenu
+      corps[0].avant = 22; corps.unshift(etiq(c.etiquette, 30));
+    }
     if (c && c.invite && c.auteur && c.auteur.nom) corps.push(bloc(ctx, 'Texte invité · ' + c.auteur.nom, { police: police('italic', 400, 32), taille: 32, hauteurLigne: 1.3, couleur: GRIS, avant: 22 }));
     var fin = [
       etiq('Le Chronographe LÀ', 0),
@@ -85,7 +89,7 @@
     var y = margeHaut, pos = {};
     pos.etiquette = y; y += comp.haut.hauteur;
     pos.sphere = y - 10; y = pos.sphere + t - 30;
-    pos.heure = y - 14; y = pos.heure + 146 * 0.9;
+    if (comp.avecHeure) { pos.heure = y - 14; y = pos.heure + 146 * 0.9; } else { y += 34; }   // édition 02 : sans heure
     pos.corps = []; comp.corps.forEach(function (b) { y += b.avant; pos.corps.push(y); y += b.hauteur; });
     y += filetAvant; pos.filet = y; y += 1.5 + filetApres;
     pos.fin = []; comp.fin.forEach(function (b) { y += b.avant; pos.fin.push(y); y += b.hauteur; });
@@ -128,7 +132,7 @@
     return Promise.all([chargerImage(opts.sphere || '/commun/media/b-fixe.jpg')].concat(document.fonts ? polices.map(function (p) { return document.fonts.load(p); }) : []))
       .then(function (r) {
         var img = r[0], canvas = document.createElement('canvas'); canvas.width = L; canvas.height = H;
-        var ctx = canvas.getContext('2d'), comp = composer(ctx, d), cible = H - MARGE_BAS;
+        var ctx = canvas.getContext('2d'), comp = composer(ctx, d), cible = H - MARGE_BAS; comp.avecHeure = !!d.heure;
         var t = 620, haut = 92, fa = 44, fp = 36, pos = mise(comp, t, haut, fa, fp);
         if (pos.bas > cible) { t = Math.max(360, 620 - (pos.bas - cible)); pos = mise(comp, t, haut, fa, fp); }
         if (pos.bas > cible) { fa = 28; fp = 24; pos = mise(comp, t, haut, fa, fp); }
@@ -137,7 +141,7 @@
         ctx.fillStyle = IVOIRE; ctx.fillRect(0, 0, L, H);
         texte(ctx, comp.haut, pos.etiquette);
         sphere(ctx, img, t, pos.sphere);
-        texte(ctx, { lignes: [d.heure], taille: 146, lh: 146 * 0.9, police: police('normal', 400, 146), couleur: ENCRE }, pos.heure);   // devant la sphère
+        if (d.heure) texte(ctx, { lignes: [d.heure], taille: 146, lh: 146 * 0.9, police: police('normal', 400, 146), couleur: ENCRE }, pos.heure);   // devant la sphère
         comp.corps.forEach(function (b, i) { texte(ctx, b, pos.corps[i]); });
         ctx.globalAlpha = 0.55; ctx.fillStyle = ENCRE; ctx.fillRect((L - 56) / 2, pos.filet, 56, 1.5); ctx.globalAlpha = 1;
         comp.fin.forEach(function (b, i) { texte(ctx, b, pos.fin[i]); });
